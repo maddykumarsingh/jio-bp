@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'GuardianSansBold';
+    src: url('../fonts/GuardianSansMedium.OTF');
+    }
+.padding-controller{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+::-webkit-scrollbar{
+    display:none;
+}
+#plane{
+    width: 55px;
+    height: 55px;
+    transition-timing-function: linear;
+}
+.map-head{
+    width:50px;
+}
+.pin{
+    width: 15px;
+    height: 15px;
+  /*  animation: pins 1s infinite; */
+}
+.pin-text{
+    font-family: 'GuardianSansBold';
+    font-size: 10px;
+    font-weight: bolder;
+}
+.svg-box{
+    display: inline-block;
+    width:100%;
+}
+.svg-box-airport{
+    display: inline-block;
+    width:100%;
+}
+.grass,.runway,#airport_building,#big-plane{
+    transition: 5s all;
+    transition-timing-function: linear;
+}
+
+.grass{
+   
+}
+.runway{
+}
+#airport_building{
+
+}
+
+#big-plane{
+    width: 500px;
+    height: 300px;
+}
+#map-scroll{
+    z-index: 777;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+#airport-scroll{
+    z-index: 888;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+.btn-next{
+    background: black;
+    width: 80px;
+    color: white;
+    top: -150px;
+    left: 20px;
+    z-index: 999;
+    position: relative;
+}
+.div-bottom{
+    height:0px;
+}
+.ace-logo{
+    position: relative;
+    bottom: -16px;
+    left: 10px;
+    z-index: 999;
+    width: 148px;
+}
+.liberty-logo{
+    position: relative;
+    bottom: -10px;
+    float: right;
+    z-index: 999;
+    width: 145px;
+}
+#flag{
+    width:70px;
+}
+
+.customer-query{
+    font-size: 20px;
+    line-height: 21px;
+    color: #4c4c4c;
+}
+.select-title{
+    font-size: 15px;
+    font-weight: bolder;
+}
+.select-button{
+    width: 100%;
+    margin: 6px auto;
+    font-size: 15px;
+    line-height: 19px;
+    background: #2196f3;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 11px;
+    cursor:pointer;
+    opacity: 0;
+    transition: 2s opacity;
+    display: none;
+}
+.select-button:hover{
+    background: #12558a;
+}
+.select-container{
+    margin-top:10px;
+    display: none;
+}
+.game-content{
+    display:none;
+}
+.executive{
+    width: 81px;
+    position: relative;
+    left: -160px;
+    transition: 3s all;
+}
+.modal-body-place{
+    background: url(../images/backgrounds/park.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.animation-container{
+    width: 32%;
+    overflow:hidden;
+    display: inline-block;
+}
+.customer{
+    width: 81px;
+    position: relative;
+    right: -160px;
+    transition: 3s all;
+}
+.question-query{
+    display: inline-block;
+    width:65%;
+    font-size: 16px;
+    line-height: 21px;
+    float: right;
+    background: #00000087;
+    color: white;
+    border-radius: 10px;
+    padding:10px;
+    display: none;
+}
+.game-body{
+    padding:0px;
+    padding-top:15px;
+}
+iframe{
+    border:none;
+}
+
+
+@media(min-width:100px) and (max-width:720px){
+    body{
+        width:100%;
+        height:100%;
+       /* overflow: hidden; */
+      /*  position: fixed; */
+    }
+    .svg-box{
+        width:1200px;
+        transition: 2s all;
+    }
+    .svg-box-airport{
+        width:1200px;
+        transition: 2s all;
+    }
+    .scroll-controller{
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x:hidden;
+        overflow-y: scroll;
+        transition: 1s all;
+    }
+    .scroll-controller-airport{
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x:hidden;
+        overflow-y: hidden;
+        transition: 1s all;
+    }
+    .liberty-logo{
+        display:none;
+    }
+    .animation-container,.question-query{
+        width:100%;
+    }
+    .question-query{
+        float: unset;
+    }
+    .select-button{
+        width:95%;
+    }
+    .modal-body-place{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position:center;
+    }
+}
+
+
+@keyframes pins {
+    from {width: 25px; height: 25px;}
+    to {width: 20px; height: 20px;}
+  }

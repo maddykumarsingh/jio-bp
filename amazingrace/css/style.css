@@ -1,0 +1,137 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+@font-face {
+    font-family: 'GuardianSansBold';
+    src: url('../fonts/GuardianSansMedium.OTF');
+    }
+body{
+font-family: 'GuardianSansBold';
+margin: 0px;
+padding:0px;
+}
+.plr0{
+    padding: 0px !important;
+}
+.auto{
+    margin: auto;
+    float: none;
+}
+.img-fluid{
+    width: 100%;
+}
+.desk{
+    display:block;
+}
+.mob{
+    display:none;
+}
+.nopadding{
+    padding-left:0px;
+    padding-right:0px;
+}
+.radios{
+    width:250px;
+    margin:0 auto;
+}
+.login-title{
+    color: #650727;
+    font-size: 25px;
+    line-height: 24px;
+    margin-bottom: 7px;
+}
+.title-one{
+    color: white;
+    font-size: 21px;
+    margin-top: 10px;
+    line-height: 24px;
+    margin-bottom: 7px;
+}
+.title-two{
+    color: #660825;
+    font-size: 20px;
+    margin-top: 1px;
+    line-height: 24px;
+    margin-bottom: 7px;
+    font-weight: bolder;
+}
+.title-three{
+    color: #D64525;
+    font-size: 21px;
+    margin-top: 1px;
+    line-height: 24px;
+    margin-bottom: 7px;
+    font-weight: bolder;
+    background: white;
+    padding: 5px 5px;
+}
+.login-container{
+ /*   background:white; */
+}
+
+.input-icon {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 26px;
+    background: #ed1e3c;
+    color: #ffffff;
+    height: 41px;
+    border-right: 1px solid black !important;
+}
+.input-icon i{
+    width: 45px;
+}
+.input-field {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 17px;
+    height: 42px;
+    background: #ed1e3c;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.input-field::placeholder{   
+    color:#ffffff;
+}
+.login-container{
+padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.login-button {
+    margin-bottom: 15px;
+    width: 108px;
+    padding: 0px 0px;
+    font-size: 24px;
+    background: black;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 9px;
+    box-shadow: 5px 5px 5px #0000007a;
+}
+.next-button{
+    width:100px;
+    background:black;
+    color:white;
+    font-size:20px;
+}
+
+
+@media (min-width:100px) and (max-width:500px){
+ .desk{
+     display:none;
+ }
+ .mob{
+     display:block;
+ }
+ .radios{
+     width:150px;
+ }
+ .login-title{
+    font-size:18px;
+}
+}

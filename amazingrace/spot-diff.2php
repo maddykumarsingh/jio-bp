@@ -1,0 +1,355 @@
+<?php 
+session_start();
+$userid=$_SESSION['userid'];
+if ($userid== '') {
+    $redirectBack=true;
+}
+
+?>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/games-global.css" rel="stylesheet">
+        <script type="text/javascript" src="js/data.js"></script>
+        <style rel="stylesheet" type="text/css">
+     #nextbtn {
+        background: #03a9f4;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+
+    }
+
+    #startbtn{
+        background: #FF6A5C;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+
+    }
+
+
+    .time {
+        background: #FF6A5C;
+        height: 40px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    button {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+
+
+    .tab {
+        margin-bottom: 10px;
+    }
+
+    .disableSelection {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: 0;
+    }
+
+    .auto {
+        margin: auto;
+        float: none;
+    }
+
+    #container>div {
+        font-weight: bold;
+
+    }
+    body {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	/* background: #EFEFEF; */
+	/*light gray*/
+	color: #5f6268;
+	/*dark gray */
+}
+
+h1 {
+	font-size: 45px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+#icon {
+	height: 100px;
+	display: block;
+	margin: -10px auto;
+}
+
+img {
+	display: block;
+	/* margin: 20px auto; */
+}
+
+.used {
+	border: #6B7A8F;
+	background: #6B7A8F;
+}
+
+#container>div {
+	color: #EFEFEF;
+	/*light gray */
+	border: 1px solid #;
+	/*green*/
+	background: #4ABDAC;
+	/*green*/
+	width: 45px;
+	height: 45px;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-right: 5px;
+	display: inline-block;
+	line-height: 45px;
+}
+
+button {
+	color: #EFEFEF;
+	/*light gray */
+	border: 1px solid #FF6A5C;
+	/*orange*/
+	background: #FF6A5C;
+	/*orange*/
+	width: 45px;
+	height: 45px;
+	font-size: 14px;
+	letter-spacing: 2.5px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+}
+
+button:hover {
+	border: #6B7A8F;
+	background: #6B7A8F;
+	cursor: pointer;
+	color: #EFEFEF;
+	/*light gray*/
+	text-transform: uppercase;
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+button:focus {
+	outline: 0;
+}
+
+
+.play-again {
+	margin-top: 20px;
+	width: 190px;
+	height: 45px;
+	background: #4ABDAC;
+	/*green*/
+	border: 1px solid #4ABDAC;
+	/*orange*/
+}
+.timer{
+        background: #03a9f4;
+        width: 200px;
+        color: white;
+        padding: 5px;
+        font-size: 17px;
+        display:inline-block;
+}
+
+div#points {
+        background: #03a9f4;
+        width: 133px;
+        color: white;
+        padding: 5px;
+        font-size: 17px;
+        display:inline-block;
+        display:none;
+    }
+    .question{
+        font-size: 20px;
+        margin-top: 20px;
+        color: black;
+    }
+    #hangman{
+        width: 250px;
+        margin-top: 20px; 
+    }
+        </style>
+        </head>
+    <body>
+
+            <div class="container-fluid">
+                    <div class="row" style="margin-top:20px;margin-bottom:70px;">
+            <div class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="points" id="points">Points: 0</div>
+                        <div class="timer" id="timer" >00:00:00</div>
+                    </div>
+                    <div class="col-md-8">
+                    <div class="col-md-12">
+                        <h4 class="question"></h4>
+                    </div>
+                    <div class="col-md-12">
+                    <div class="tab">
+                        <button>A</button>
+                        <button>B</button>
+                        <button>C</button>
+                        <button>D</button>
+                        <button>E</button>
+                        <button>F</button>
+                        <button>G</button>
+                        <button>H</button>
+                        <button>I</button>
+                    </div>
+
+                    <div class="tab">
+                        <button>J</button>
+                        <button>K</button>
+                        <button>L</button>
+                        <button>M</button>
+                        <button>N</button>
+                        <button>O</button>
+                        <button>P</button>
+                        <button>Q</button>
+                    </div>
+
+                    <div class="tab">
+                        <button>R</button>
+                        <button>S</button>
+                        <button>T</button>
+                        <button>U</button>
+                        <button>V</button>
+                        <button>W</button>
+                        <button>X</button>
+                        <button>Y</button>
+                        <button>Z</button>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-12">
+                        <div class="row">
+                            <h4>Click above box for your answer</h4>
+                            <h4 class="category"></h4>
+                            <div id="container">
+                                <!-- Random word Divs appended here -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-5 col-md-5 col-lg-5 col-xs-8 auto">
+                                <input type="submit"
+                                    style="display:none;width: 100%;margin-top: 20px;position: relative;z-index: 9999;" value="Next"
+                                    id="nextbtn">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                    <img id="hangman" src="images/faces/0.png">
+                    </div>
+            </div>
+        </div>
+        </div>
+
+
+    
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+<?php 
+if(isset($redirectBack)){
+    echo 'window.parent.redirectBack();';
+}
+?>
+var correct = new Audio('audio/correct.mp3');
+var incorrect = new Audio('audio/incorrect.mp3');
+
+
+
+
+var target,
+   seconds =0, minutes =0, hours =0; var t;
+
+function add() {
+      seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+  
+
+    
+    target= (hours ? (hours > 3 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    $("#timer").html("Time : "+ target);
+    $(".timer").val(target);
+
+    timer();
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
+
+
+
+
+
+function send(){
+                      $.ajax({ 
+                                type: "POST", 
+                                url: "spot-submit.php", 
+                                data: "time="+target+"&points="+points+"&answers="+answers.toString(), 
+                                success: function(result){ 
+                                    console.log(result);
+                                    if(result=="1010"){
+                                        console.log(result);
+                                        swal("Thank you for submission.", "", "success").then(() => {
+                                            window.parent.closeGame();
+                                    });
+                                        /*
+                                        swal("Thank you for submission.", "", "success").then(() => {
+                                            window.parent.closeGame();
+                                    });
+                                    */
+                                       }
+                                    } 
+                            });   
+}
+
+
+    </script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

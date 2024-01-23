@@ -6,76 +6,47 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="js/sweetalert.min1.js"></script>
+  <script src="dist/js/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
+  <script src="dist/js/sweetalert.min1.js"></script>
 <style>
-   @media screen and (min-width: 768px) {
+     body {
+        background-image: url(dist/images/background.jpg);
+        width: 100vw; 
+        height:100vh;
+     }
 
-        .begin {
-            font-weight: bold;
-            background-image: linear-gradient(to right, #E25569, #FB9946);
-            padding: 5px 15px 5px 15px;
-            font-size: 20px;
-            border-radius: 10px;
-        }
+     .navbar{
+        background-color:#00943a; height:12%; border-bottom:15px solid #f8d100; position: relative;
+     }
 
-        .container-fluid {
+     main {
+        height:88%;
+     }
 
-            width: 100%;
-            position: absolute;
-        }
+     .image-container{
+        width:100%; height:100% ;display: flex; justify-content: center; align-items: center;
+     }
 
-    }
+     .image-container > img {
+        width: 40%;
+     }
 
-    @media screen and (max-width: 768px) {
-        .container-fluid {
-            top: 15%;
-            position: absolute;
-        }
-
-        .begin {
-            font-weight: bold;
-            background-image: linear-gradient(to right, #E25569, #FB9946);
-            padding: 5px 15px 5px 15px;
-            font-size: 15px;
-            border-radius: 10px;
-        }
-
-
-    }</style>
+    </style>
 </head>
 <body>
 
-       
+<header class="navbar">
+  <div style="background-color: white; padding:20px; position: absolute; right:0px; width:20vw; border-radius: 32px 0 0 0; height:12vh">
 
-<div class="container-fluid mt-4" >
-  <div class="row">
-      <div class="col-md-4 auto"><img src="dist/images/welcome-logo.png" class="welcome-logo"/></div>
   </div>
-<div class="col-md-12 text-center"  style="margin-top:50px;">
+</header>
 
+ <main >
+    <div class="image-container"><img src="dist/images/welcome-logo.png" class="welcome-logo"/></div>
+ </main>
+       
 </div>
-<a href="rules.php"><div class="btn btn-info begin ">BEGIN PLAY</div></a>
-</div>
-<script>
 
-document.addEventListener('contextmenu', event=> event.preventDefault()); 
-document.onkeydown = function(e) { 
-if(event.keyCode == 123) { 
-return false; 
-} 
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
-return false; 
-} 
-if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
-return false; 
-} 
-if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
-return false; 
-} 
-} 
-</script> 
 </body>
 </html>

@@ -627,8 +627,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">4. It is the lump sum amount that a nominee receives when the life
-                                insured dies within the policy period.<input type="text" name="ans4" id="ans4"
+                            <div class="game-title1">4. To align my work and personal life well such that it benefits my colleagues and company, I must learn to <input type="text" name="ans4" id="ans4"
                                     class="login-text  fourthans" maxlength="12" autocomplete="off">
                             </div>
                         </div>

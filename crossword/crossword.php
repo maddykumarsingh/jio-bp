@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <title>Down and Across</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min1.js"></script>
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+        <script src="dist/js/jquery.min.js"></script>
+        <script src="dist/js/bootstrap.min1.js"></script>
+        <link href="dist/css/font-awesome.min.css" rel="stylesheet">
 
     </head>
     <body>
     <style type="text/css">
     @font-face {
     font-family: 'FiraSans-Medium';
-    src: url('fonts/FiraSans-Medium.otf');
+    src: url('dist/fonts/FiraSans-Medium.otf');
     }
             .auto {
                 margin: auto;
@@ -27,7 +27,7 @@
     font-family: 'FiraSans-Medium';
     width:100%;
     background-color: white;
-    background-image: url(images/background-web.png);
+    background-image: url(dist/images/background-web.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -688,15 +688,11 @@ input{
 
     
 
-    <script src="js/sweetalert.min1.js"></script>
+    <script src="dist/js/sweetalert.min1.js"></script>
     <script>
-<?php 
-if(isset($redirectBack)){
-    echo 'window.parent.redirectBack();';
-}
-?>
 
-    <?php echo $demoprint;?>
+
+
         
     var question_count=0;
     var wantToShow=6;
@@ -725,14 +721,6 @@ function add() {
 
 
     timer();
-
-    var democount = "<?php echo $sessionId;?>";
-        if (democount == "demobypass") {
-	var time=$("#timerid").val();
-            if (time== "00:5:00") {
-                document.getElementById("submit").click();
-            }
-        }
 
 }
 function timer() {

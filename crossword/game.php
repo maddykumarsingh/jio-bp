@@ -1,5 +1,5 @@
 
-<?php /* include_once('header.php');?>
+<?php include_once('header.php'); ?>
 
 <style type="text/css">
     @font-face {
@@ -63,10 +63,10 @@
     }
 
 
-     //crossword puzzle 
+    /* //crossword puzzle */
 
     .cross-game {
-        margin-top: 0px;
+        margin-top: 40px;
         width: 60%;
         text-align: center;
         border-radius: 10px;
@@ -91,7 +91,7 @@
         font-weight: 900;
         width: 1.9em;
         height: 1.9em;
-        // line-height: 1.25em; 
+        /* line-height: 1.25em; */
         vertical-align: middle;
         text-align: center;
         -webkit-touch-callout: none;
@@ -153,7 +153,8 @@
         }
 
         div#crossword {
-            margin-top: 20%;
+            margin-top: 6%;
+            margin-left: 7%;
         }
     }
 
@@ -996,4 +997,3 @@ return false;
 
 
 <?php include_once('footer.php'); ?>
-*/

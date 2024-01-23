@@ -1,37 +1,6 @@
-<?php
+<?php include_once('header.php'); ?>
 
-session_start();
-$userId=$_SESSION['userId'];
-$organizationId=$_SESSION['organizationId'];
-$sessionId=$_SESSION['sessionId'];
-$_SESSION['userid']=$userId;
-if ($_SESSION['userid']== '') {
-    header("Location:index.php");
-}
-
-if($_SESSION['firstName']=="demo"){
-    $demoprint="var isdemo=true;";
-  }else{
-    $demoprint="var isdemo=false;";
-  }
-
-?>
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Down and Across</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-
-</head>
-
-<body>
-    <style type="text/css">
+<style type="text/css">
     @font-face {
         font-family: 'FiraSans-Medium';
         src: url('fonts/FiraSans-Medium.otf');
@@ -44,21 +13,9 @@ if($_SESSION['firstName']=="demo"){
 
 
 
-    body {
-        font-family: 'FiraSans-Medium';
-        width: 100%;
-        background-color: white;
-        background-image: url(images/background-web.png);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
 
     @media (min-width:100px) and (max-width:500px) {
-        body {
-            overflow: scroll;
-            background-image: url(images/background-mob.png);
-            background-repeat: repeat;
-        }
+       
 
         .desk {
             display: none;
@@ -76,6 +33,13 @@ if($_SESSION['firstName']=="demo"){
     .highlight-text {
         font-size: 18px;
         margin-top: 5px;
+    }
+
+    .login-text{
+        outline: 0;
+        border: 0;
+        border-bottom: 1px solid black;
+        background-color: transparent;
     }
 
     .timer {
@@ -101,8 +65,6 @@ if($_SESSION['firstName']=="demo"){
     /* //crossword puzzle */
 
     .cross-game {
-        color: #ffffff !important;
-        background-image: linear-gradient(to right, #E25569, #FB9946);
         margin-top: 0px;
         width: 60%;
         text-align: center;
@@ -122,7 +84,6 @@ if($_SESSION['firstName']=="demo"){
 
     .square {
         color: black;
-        margin: 0 1px 4px 0;
         display: inline-block;
         font-size: 16px;
 
@@ -147,8 +108,7 @@ if($_SESSION['firstName']=="demo"){
         border: 0;
         padding: 0;
         font-weight: 900;
-        color: #ffffff;
-        margin: 0px 0 0 -1px;
+        color: black;
         width: 1.35em !important;
         height: 1.45em !important;
         text-align: center;
@@ -156,14 +116,7 @@ if($_SESSION['firstName']=="demo"){
     }
 
     .letter {
-        background-image: linear-gradient(to right, #E25569, #FB9946);
-
-        -webkit-touch-callout: text;
-        -webkit-user-select: text;
-        -khtml-user-select: text;
-        -moz-user-select: text;
-        -ms-user-select: text;
-        user-select: text;
+        border: 0.5px solid black;
     }
 
     @media (max-width: 320px) {
@@ -237,38 +190,9 @@ if($_SESSION['firstName']=="demo"){
         margin-top: 30px;
     }
 
-    @media (max-width: 768px) {
-        .char {
-            font-size: 12px !important;
-            width: 1.25em !important;
-            height: 1.25em !important;
-        }
+   
 
-        .p0 {
-            padding: 0px !important;
-        }
-
-        .input-text {
-            font-size: 16px !important;
-        }
-
-        .title-game {
-            font-size: 14px !important;
-            padding: 10px 20px !important;
-        }
-
-        .game-title1 {
-            font-size: 16px !important;
-        }
-    }
-
-    .game-title1 {
-        font-weight: 500;
-        font-size: 15px;
-        padding: 5px 10px;
-        margin-bottom: 8px;
-        color: black;
-    }
+   
 
     .log-text {
         font-weight: bolder;
@@ -276,37 +200,17 @@ if($_SESSION['firstName']=="demo"){
 
     .form-control {
         border: 1px solid #080808;
-
     }
 
     input {
         border: 2px solid black;
     }
 
-    /* .square{
-    border: 1px solid black;
-} */
+
     </style>
-    <?php include("../actions-default.php");  back("rules.php");?>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12 highlight-text text-center"
-                style="margin:20px 0px 30px;font-weight:bold;">How well do you know your Life Insurance?</div>
-            <div class="col-sm-8 col-md-8 col-lg-8 col-xs-12 progress-container" style="margin-top:15px;">
-                <div class="progress">
-                    <div class="progress-bar bg-danger ui-background ui-color" style="width:10%; background:#e9695e; ">
-                        0/9</div>
-                </div>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 col-xs-12 text-center">
-                <div class="timer" id="timer">Time : 00:00:00</div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container-fluid" style="margin:20px 0px 30px;">
 
-        <form method="post" id="formdata" name="formdata">
+<form method="post" id="formdata" name="formdata">
             <div class="row" style="margin-top:10px;margin-bottom:40px;">
                 <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 plr0">
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 p0" id="crossword">
@@ -318,16 +222,7 @@ if($_SESSION['firstName']=="demo"){
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
-                            <div class="square"></div>
                             <div class="square">1</div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <!-- <div class="square"></div>
-                                        <div class="square"></div>
-					                    <div class="square"></div>	 -->
                         </div>
 
                         <!-- row 1 -->
@@ -767,10 +662,8 @@ if($_SESSION['firstName']=="demo"){
                             <div class="cross-game mt-30">DOWN</div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">1. It is a type of life cover that provides insurance coverage to
-                                two people under the same policy. The claim is payable either on the first death or last
-                                survivor basis. <input type="text" name="ans1" id="ans1" class="login-text firstans"
-                                    maxlength="9" autocomplete="off">
+                            <div class="game-title1">1. It is important for me to focus on delivering  <input type="text" name="ans1" id="ans1" class="login-text firstans"
+                                    maxlength="9" autocomplete="off">within committed timelines
                             </div>
                         </div>
 
@@ -810,506 +703,302 @@ if($_SESSION['firstName']=="demo"){
     </div>
     </form>
 
-    </div>
-    </div>
 
 
-
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-    <?php 
-if(isset($redirectBack)){
-    echo 'window.parent.redirectBack();';
-}
-?>
 
-    <?php echo $demoprint;?>
 
-    var question_count = 0;
-    var wantToShow = 9;
 
-    var target,
-        seconds = 0,
-        minutes = 0,
-        hours = 0;
-    var t;
+        
+    var question_count=0;
+    var wantToShow=6;
 
-    function add() {
-        seconds++;
-        if (seconds >= 60) {
-            seconds = 0;
-            minutes++;
-            if (minutes >= 60) {
-                minutes = 0;
-                hours++;
-            }
+var target,
+   seconds =0, minutes =0, hours =0; var t;
+
+function add() {
+      seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
         }
-
-
-
-        target = (hours ? (hours > 3 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" +
-            minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
-        $("#timer").html("Time : " + target);
-        $(".timer").val(target);
-        $("#timerid").val(target);
-
-
-
-        timer();
-
-        var democount = "<?php echo $sessionId;?>";
-        if (democount == "demobypass") {
-            var time = $("#timerid").val();
-            if (time == "00:5:00") {
-                document.getElementById("submit").click();
-            }
-        }
-
     }
+  
 
-    function timer() {
-        t = setTimeout(add, 1000);
-    }
+    
+    target= (hours ? (hours > 3 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    $("#timer").html("Time : "+ target);
+    $(".timer").val(target);
+	$("#timerid").val(target);
+
+
+
     timer();
 
-
-
-    function progressBar(location) {
-        console.log("location----" + location);
-        currrentProgress = (location) * 100 / wantToShow;
-        console.log(currrentProgress + "this");
-        $(".progress-bar").eq(0).css("width", currrentProgress + "%");
-        $(".progress-bar").html((location) + "/" + wantToShow);
-
-    }
-
-
-    $(document).ready(function() {
-        $('.firstans').change(function() {
-            var first = $(this).val().toLowerCase();
-            if (first == "jointlife") {
-                $("#ans1").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans1").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-
-            if ($(this).val().length == 9) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-
-        });
-        $('.firstans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans10').val(wordtochar[0]);
-                $('.ans11').val(wordtochar[1]);
-                $('.ans12').val(wordtochar[2]);
-                $('.ans13').val(wordtochar[3]);
-                $('.ans14').val(wordtochar[4]);
-                $('.ans15').val(wordtochar[5]);
-                $('.ans16').val(wordtochar[6]);
-                $('.ans17').val(wordtochar[7]);
-                $('.ans18').val(wordtochar[8]);
-                $('.ans19').val(wordtochar[9]);
-                // $('.ans110').val(wordtochar[10]);
-            }).get();
-
-            // $('.ans1').val(valueArray.split(''));
-        });
-    });
-
-    $(document).ready(function() {
-        $('.secondans').change(function() {
-            var secondans = $(this).val().toLowerCase();
-            if ($(this).val().length == 5) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-            if (secondans == "grace") {
-                $("#ans2").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans2").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-        });
-        $('.secondans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans20').val(wordtochar[0]);
-                $('.ans21').val(wordtochar[1]);
-                $('.ans22').val(wordtochar[2]);
-                $('.ans23').val(wordtochar[3]);
-                $('.ans24').val(wordtochar[4]);
-
-            }).get();
-
-            // $('.secondans').val(valueArray.join(''));
-        });
-    });
-
-    $(document).ready(function() {
-        $('.thirdans').change(function() {
-            var thirdans = $(this).val().toLowerCase();
-
-            if ($(this).val().length == 7) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-
-            if (thirdans == "nominee") {
-                $("#ans3").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans3").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-        });
-        $('.thirdans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans30').val(wordtochar[0]);
-                $('.ans31').val(wordtochar[1]);
-                $('.ans32').val(wordtochar[2]);
-                $('.ans33').val(wordtochar[3]);
-                $('.ans34').val(wordtochar[4]);
-                $('.ans35').val(wordtochar[5]);
-                $('.ans36').val(wordtochar[6]);
-                // $('.ans37').val(wordtochar[7]);
-                // $('.ans38').val(wordtochar[8]);
-                // $('.ans39').val(wordtochar[9]);
-                // $('.ans310').val(wordtochar[10]);
-                // $('.ans311').val(wordtochar[11]);
-                // $('.ans312').val(wordtochar[12]);
-
-                // $('.thirdans').val(valueArray.join(''));
-            }).get();
-
-        });
-    });
-
-    $(document).ready(function() {
-        $('.fourthans').change(function() {
-            var fourthans = $(this).val().toLowerCase();
-            if ($(this).val().length == 12) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-            if (fourthans == "deathbenefit") {
-                $("#ans4").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans4").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-        });
-        $('.fourthans').keyup(function() {
-
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans40').val(wordtochar[0]);
-                $('.ans41').val(wordtochar[1]);
-                $('.ans42').val(wordtochar[2]);
-                $('.ans43').val(wordtochar[3]);
-                $('.ans44').val(wordtochar[4]);
-                $('.ans45').val(wordtochar[5]);
-                $('.ans46').val(wordtochar[6]);
-                $('.ans47').val(wordtochar[7]);
-                $('.ans48').val(wordtochar[8]);
-                $('.ans49').val(wordtochar[9]);
-                $('.ans410').val(wordtochar[10]);
-                $('.ans411').val(wordtochar[11]);
-
-            }).get();
-
-            //$('.fourthans').val(valueArray.join(''));
-        });
-    });
-
-    $(document).ready(function() {
-        $('.fivthans').change(function() {
-            var fivthans = $(this).val().toLowerCase();
-            if ($(this).val().length == 9) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-            if (fivthans == "insurance") {
-                $("#ans5").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans5").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-
-        });
-        $('.fivthans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans50').val(wordtochar[0]);
-                $('.ans51').val(wordtochar[1]);
-                $('.ans52').val(wordtochar[2]);
-                $('.ans53').val(wordtochar[3]);
-                $('.ans54').val(wordtochar[4]);
-                $('.ans55').val(wordtochar[5]);
-                $('.ans56').val(wordtochar[6]);
-                $('.ans57').val(wordtochar[7]);
-                $('.ans58').val(wordtochar[8]);
-                // $('.ans59').val(wordtochar[9]);
-                // $('.ans510').val(wordtochar[10]);
-                // // $('.ans511').val(wordtochar[11]);
-
-            }).get();
-
-            // $('.fivthans').val(valueArray.join(''));
-        });
-    });
-    $(document).ready(function() {
-        var sum = [];
-        $('.sixthans').change(function() {
-            var sixth = $(this).val().toLowerCase();
-            if ($(this).val().length == 8) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-            if (sixth == "maturity") {
-                $("#ans6").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans6").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-
-        });
-
-        $('.sixthans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans60').val(wordtochar[0]);
-                $('.ans61').val(wordtochar[1]);
-                $('.ans62').val(wordtochar[2]);
-                $('.ans63').val(wordtochar[3]);
-                $('.ans64').val(wordtochar[4]);
-                $('.ans65').val(wordtochar[5]);
-                $('.ans66').val(wordtochar[6]);
-                $('.ans67').val(wordtochar[7]);
-                // $('.ans68').val(wordtochar[8]);
-                // $('.ans69').val(wordtochar[9]);
-                // $('.ans610').val(wordtochar[10]);
-
-            }).get();
-            // $('.fivthans').val(valueArray.join(''));
-        });
-    });
+}
+function timer() {
+    t = setTimeout(add, 1000);
+}
+timer();
 
 
 
-    $(document).ready(function() {
-        var sum = [];
-        $('.seventhans').change(function() {
-            var seventhans = $(this).val().toLowerCase();
-            if ($(this).val().length == 5) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-            if (seventhans == "lapse") {
-                $("#ans7").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans7").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
+function progressBar(location){
+    console.log("location----"+location);
+    currrentProgress=(location)*100/wantToShow;
+    console.log(currrentProgress+"this");
+    $(".progress-bar").eq(0).css("width",currrentProgress+"%");
+    $(".progress-bar").html((location)+"/"+wantToShow);
 
-        });
-
-        $('.seventhans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans70').val(wordtochar[0]);
-                $('.ans71').val(wordtochar[1]);
-                $('.ans72').val(wordtochar[2]);
-                $('.ans73').val(wordtochar[3]);
-                $('.ans74').val(wordtochar[4]);
-                $('.ans75').val(wordtochar[5]);
+}
 
 
-            }).get();
-            // $('.fivthans').val(valueArray.join(''));
-        });
-    });
-    $(document).ready(function() {
-        var sum = [];
-        $('.eightans').change(function() {
-            var eigthans = $(this).val().toLowerCase();
-            if ($(this).val().length == 5) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
+$(document).ready(function() {
+            $('.firstans').change(function() {
+                var first=$(this).val().toLowerCase();
 
-            if (eigthans == "quote") {
-                $("#ans8").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans8").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-        });
+		if($(this).val().length == 4) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
 
-        $('.eightans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans80').val(wordtochar[0]);
-                $('.ans81').val(wordtochar[1]);
-                $('.ans82').val(wordtochar[2]);
-                $('.ans83').val(wordtochar[3]);
-                $('.ans84').val(wordtochar[4]);
-                $('.ans85').val(wordtochar[5]);
-
-
-            }).get();
-            // $('.fivthans').val(valueArray.join(''));
-        });
-    });
-    $(document).ready(function() {
-        var sum = [];
-        $('.ninthans').change(function() {
-            var ninthans = $(this).val().toLowerCase();
-            if ($(this).val().length == 9) {
-                question_count = question_count + 1;
-                progressBar(question_count);
-            }
-            if (ninthans == "terminate") {
-                $("#ans9").css({
-                    "background-color": "green",
-                    "color": "white"
-                });
-            } else {
-                $("#ans9").css({
-                    "background-color": "red",
-                    "color": "white"
-                })
-            }
-
-        });
-
-        $('.ninthans').keyup(function() {
-            var wordtochar = this.value.split('');
-            // console.log(wordtochar);
-            var valueArray = $(wordtochar).map(function() {
-                $('.ans90').val(wordtochar[0]);
-                $('.ans91').val(wordtochar[1]);
-                $('.ans92').val(wordtochar[2]);
-                $('.ans93').val(wordtochar[3]);
-                $('.ans94').val(wordtochar[4]);
-                $('.ans95').val(wordtochar[5]);
-                $('.ans96').val(wordtochar[6]);
-                $('.ans97').val(wordtochar[7]);
-                $('.ans98').val(wordtochar[8]);
-                $('.ans99').val(wordtochar[9]);
-
-
-            }).get();
-            // $('.fivthans').val(valueArray.join(''));
-        });
-    });
-
-    $(document).ready(function() {
-        $('#formdata').submit(function(event) {
-            event.preventDefault();
-            var formData = new FormData($("#formdata")[0]);
-            $.ajax({
-                url: "crossword-insert-abc.php",
-                type: "POST",
-                data: formData,
-                contentType: false,
-                cache: false,
-                processData: false,
-                success: function(d) {
-console.log(d);
-                    var data = JSON.parse(d);
-                    if (data.success == "true") {
-                        // swal("Thank you for submission", "",
-                        //     "success").then(() => {
-                        //     location.href = ("../thankyou.php");
-                        // });
-
-                        location.href = ("leaderboard.php");
-                    } else if (d == 1) {
-                        swal("Thank you for playing.Subscribe to any PLAN to play with your peers.",
-                            "",
-                            "success").then(() => {
-                            location.href = ("https://extramileplay.com/plans");
-                        });
-                    }
-
-
-
-                }
+            });
+            $('.firstans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                          $('.ans10').val(wordtochar[0]);
+                    $('.ans11').val(wordtochar[1]);
+                    $('.ans12').val(wordtochar[2]);
+                    $('.ans13').val(wordtochar[3]);
+                    // $('.ans14').val(wordtochar[4]);
+                    // $('.ans15').val(wordtochar[5]);
+                    // $('.ans16').val(wordtochar[6]);
+                    // $('.ans17').val(wordtochar[7]);
+                    // $('.ans18').val(wordtochar[8]);
+                    // $('.ans19').val(wordtochar[9]);
+                    // $('.ans110').val(wordtochar[10]);
+                }).get();
+            
+                // $('.ans1').val(valueArray.split(''));
             });
         });
+
+        $(document).ready(function() {
+            $('.secondans').change(function() {
+                var secondans=$(this).val().toLowerCase();
+		 if($(this).val().length == 7) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+            });
+            $('.secondans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                  $('.ans20').val(wordtochar[0]);
+                    $('.ans21').val(wordtochar[1]);
+                    $('.ans22').val(wordtochar[2]);
+                    $('.ans23').val(wordtochar[3]);
+                    $('.ans24').val(wordtochar[4]);
+                    $('.ans25').val(wordtochar[5]);
+                    $('.ans26').val(wordtochar[6]);
+                    // $('.ans27').val(wordtochar[7]);
+                }).get();
+               
+                // $('.secondans').val(valueArray.join(''));
+            });
+        });
+
+        $(document).ready(function() {
+            $('.thirdans').change(function() {
+                var thirdans=$(this).val().toLowerCase();
+
+		if($(this).val().length == 13) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+
+    
+            });
+            $('.thirdans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                          $('.ans30').val(wordtochar[0]);
+                    $('.ans31').val(wordtochar[1]);
+                    $('.ans32').val(wordtochar[2]);
+                    $('.ans33').val(wordtochar[3]);
+                    $('.ans34').val(wordtochar[4]);
+                    $('.ans35').val(wordtochar[5]);
+                    $('.ans36').val(wordtochar[6]);
+                    $('.ans37').val(wordtochar[7]);
+                    $('.ans38').val(wordtochar[8]);
+                    $('.ans39').val(wordtochar[9]);
+                    $('.ans310').val(wordtochar[10]);
+                    $('.ans311').val(wordtochar[11]);
+                    $('.ans312').val(wordtochar[12]);
+
+                    // $('.thirdans').val(valueArray.join(''));
+                }).get();
+               
+            });
+        });
+
+        $(document).ready(function() {
+            $('.fourthans').change(function() {
+                var fourthans=$(this).val().toLowerCase();
+		if($(this).val().length == 6) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+
+            });
+            $('.fourthans').keyup(function() {
+
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                   $('.ans40').val(wordtochar[0]);
+                    $('.ans41').val(wordtochar[1]);
+                    $('.ans42').val(wordtochar[2]);
+                    $('.ans43').val(wordtochar[3]);
+                    $('.ans44').val(wordtochar[4]);
+                    $('.ans45').val(wordtochar[5]);
+                    // $('.ans46').val(wordtochar[6]);
+                    // $('.ans47').val(wordtochar[7]);
+                    // $('.ans48').val(wordtochar[8]);
+
+                }).get();
+               
+                //$('.fourthans').val(valueArray.join(''));
+            });
+        });
+        $(document).ready(function() {
+            $('.fivthans').change(function() {
+                var fivthans=$(this).val().toLowerCase();
+		if($(this).val().length == 8) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+
+ 
+            });
+            $('.fivthans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                    $('.ans50').val(wordtochar[0]);
+                    $('.ans51').val(wordtochar[1]);
+                    $('.ans52').val(wordtochar[2]);
+                    $('.ans53').val(wordtochar[3]);
+                    $('.ans54').val(wordtochar[4]);
+                    $('.ans55').val(wordtochar[5]);
+                    $('.ans56').val(wordtochar[6]);
+                    $('.ans57').val(wordtochar[7]);
+                    // $('.ans58').val(wordtochar[8]);
+                    // $('.ans59').val(wordtochar[9]);
+                    // $('.ans510').val(wordtochar[10]);
+                    // // $('.ans511').val(wordtochar[11]);
+
+                }).get();
+               
+                // $('.fivthans').val(valueArray.join(''));
+            });
+        });
+        $(document).ready(function() {
+            var sum = [];
+ 	   $('.sixthans').change(function() {
+                var fivthans=$(this).val().toLowerCase();
+		if($(this).val().length == 11) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+
+
+            });
+
+            $('.sixthans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                    $('.ans60').val(wordtochar[0]);
+                    $('.ans61').val(wordtochar[1]);
+                    $('.ans62').val(wordtochar[2]);
+                    $('.ans63').val(wordtochar[3]);
+                    $('.ans64').val(wordtochar[4]);
+                    $('.ans65').val(wordtochar[5]);
+                    $('.ans66').val(wordtochar[6]);
+                    $('.ans67').val(wordtochar[7]);
+                    $('.ans68').val(wordtochar[8]);
+                    $('.ans69').val(wordtochar[9]);
+                    $('.ans610').val(wordtochar[10]);
+                  
+                }).get();
+                // $('.fivthans').val(valueArray.join(''));
+            });
+        });
+
+
+
+$(document).ready(function() {
+            $('#formdata').submit(function(event) {
+                event.preventDefault();
+                var formData = new FormData($("#formdata")[0]);
+    $.ajax({
+        url: "crossword-insert.php",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(d) {
+
+                  var data = JSON.parse(d);
+       	 	if(data.success=="true"){
+                    swal("Thank you for submission", "",
+                        "success").then(() => {
+                        location.href = ("leaderboard.php");
+                    });
+
+
+                } else if(d==1) {
+                    swal("Thank you for playing.Subscribe to any PLAN to play with your peers.", "",
+                        "success").then(() => {
+                            location.href = ("https://extramileplay.com/plans");
+                    });
+                }
+
+
+         
+        }
+    });
+        });
     });
     </script>
 
-    <script>
-    // document.addEventListener('contextmenu', event=> event.preventDefault()); 
-    // document.onkeydown = function(e) { 
-    // if(event.keyCode == 123) { 
-    // return false; 
-    // } 
-    // if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
-    // return false; 
-    // } 
-    // if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
-    // return false; 
-    // } 
-    // if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
-    // return false; 
-    // } 
-    // } 
-    </script>
-</body>
+<script>
 
-</html>
+document.addEventListener('contextmenu', event=> event.preventDefault()); 
+document.onkeydown = function(e) { 
+if(event.keyCode == 123) { 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+return false; 
+} 
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+return false; 
+} 
+} 
+</script> 
+
+
+
+<?php include_once('footer.php'); ?>

@@ -1,34 +1,4 @@
-<?php
 
-session_start();
-include_once 'dao/config.php';
-$_SESSION['userid']=$_SESSION['token'];
-if ($_SESSION['userid']== '') {
-    header("Location:index.php");
-}
-$userId=$_SESSION['userId'];
-$organizationId=$_SESSION['organizationId'];
-$sessionId=$_SESSION['sessionId'];
-
-
-if($_SESSION['v_sessionId']=="f3dc6b3a-4850-4c3a-92a5-9dd80f120952"){
-
-    $settings=json_decode(file_get_contents("admin/settings1.js"),true)[0];
-    include_once '../admin_assets/triggers.php';
-
-    $rules=default_data("rules");
-
-
-
-}else{
-
-    $settings=json_decode(file_get_contents("admin/settings.js"),true)[0];
-    include_once '../admin_assets/triggers.php';
-    
-    $rules=default_data("rules");
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,10 +66,6 @@ if($_SESSION['v_sessionId']=="f3dc6b3a-4850-4c3a-92a5-9dd80f120952"){
   </style>
 </head>
 <body>
-<?php 
-include("../actions-default.php");back("index.php?save");
-
-?>
 
 <script>
         $(document).ready(function () {
@@ -110,16 +76,14 @@ include("../actions-default.php");back("index.php?save");
     </script>
 <div class="container-fluid container-control">
 <div class="row">
-<?php if($organizationId === 'df0dbf83-2a5d-486e-be7e-ec55cd05ac8b') {?>
 <div class="col-md-2 auto desk"></div>
 <div class="col-md-8 auto"><img src="images/respect_logo.png?v=1" class="welcome-logo respet_logo"/></div>
 <div class="col-md-2 auto"></div>
-<?php }else{ ?>
+
     <div class="col-md-2 auto desk"></div>
 <div class="col-md-8 auto"><img src="images/welcome-logo.png" class="welcome-logo"/></div>
 <div class="col-md-2 auto"></div>
 
-    <?php  }?>
 </div>
 <div class="row">
 <div class="col-md-12 text-center">
@@ -127,19 +91,7 @@ include("../actions-default.php");back("index.php?save");
 </div>
 <div class="col-md-6 col-md-offset-3">
 <ul class="rule-list">
-    <?php 
-    if($_SESSION['v_sessionId']=="f3dc6b3a-4850-4c3a-92a5-9dd80f120952"){
-        echo '<li>This game is based on Fathers Day</li>';
-        for($i=1; $i<sizeof($rules); $i++){
-            echo '<li>'.$rules[$i].'</li>';
-        }
-    }else{
-        for($i=0; $i<sizeof($rules); $i++){
-            echo '<li>'.$rules[$i].'</li>';
-        }
-    }
-
-    ?>
+   
 </ul>
 </div>
 <div class="col-md-12 text-center">

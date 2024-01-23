@@ -1,12 +1,4 @@
-<?php
 
-session_start();
-$_SESSION['userid']=$_SESSION['token'];
-if ($_SESSION['userid']== '') {
-    header("Location:index.php");
-}
-
-?>
 <!doctype html>
 <html>
     <head>

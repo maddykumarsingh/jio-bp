@@ -1,6 +1,8 @@
 <?php 
 
-    if( !$_SESSION['user'] ){
+session_start();
+
+    if( !$_SESSION['username'] ){
          header('Location:login.php');
     }
 

@@ -1,21 +1,3 @@
-<?php
-
-session_start();
-$userId=$_SESSION['userId'];
-$organizationId=$_SESSION['organizationId'];
-$sessionId=$_SESSION['sessionId'];
-$_SESSION['userid']=$userId;
-if ($_SESSION['userid']== '') {
-    header("Location:index.php");
-}
-
-if($_SESSION['firstName']=="demo"){
-    $demoprint="var isdemo=true;";
-  }else{
-    $demoprint="var isdemo=false;";
-  }
-
-?>
 <!doctype html>
 <html>
     <head>
@@ -230,7 +212,6 @@ input{
 }
 
    </style>
-<?php include("../actions-default.php");  back("rules.php");?>
     <div class="container-fluid">
     <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12 highlight-text text-center" style="margin:20px 0px 30px;font-weight:bold;">TEASE YOUR BRAIN IN THIS FOOD FOR THOUGHT PUZZLE</div>

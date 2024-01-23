@@ -1,4 +1,5 @@
-<?php include_once('header.php'); ?>
+
+<?php /* include_once('header.php');?>
 
 <style type="text/css">
     @font-face {
@@ -62,7 +63,7 @@
     }
 
 
-    /* //crossword puzzle */
+     //crossword puzzle 
 
     .cross-game {
         margin-top: 0px;
@@ -90,7 +91,7 @@
         font-weight: 900;
         width: 1.9em;
         height: 1.9em;
-        /* line-height: 1.25em; */
+        // line-height: 1.25em; 
         vertical-align: middle;
         text-align: center;
         -webkit-touch-callout: none;
@@ -211,7 +212,7 @@
 
 
 <form method="post" id="formdata" name="formdata">
-            <div class="row" style="margin-top:10px;margin-bottom:40px;">
+            <div class="row" style="margin-top:10px; margin-bottom:40px;">
                 <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 plr0">
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 p0" id="crossword">
                         <div class="">
@@ -995,3 +996,4 @@ return false;
 
 
 <?php include_once('footer.php'); ?>
+*/

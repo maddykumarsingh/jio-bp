@@ -621,9 +621,8 @@
                             <!-- <input type="hidden" name="userid" value="<?php echo $_SESSION["userid"] ?>" > -->
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1" style=""> 3. A person (Generally child, spouse or parents) who gets
-                                the sum assured as per the terms and conditions of your plan <input type="text"
-                                    name="ans3" id="ans3" class="login-text thirdans" maxlength="7" autocomplete="off">
+                            <div class="game-title1" style=""> 3. Having ownership means to take <input type="text"
+                                    name="ans3" id="ans3" class="login-text thirdans" maxlength="7" autocomplete="off">of our actions and not shying away from either positive or negative outcomes 
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
@@ -633,17 +632,15 @@
                         </div>
 
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">7. It is the end of the benefits or privileges applicable under a
-                                policy. It happens due to the non-payment of premium or any inactivity<input type="text"
+                            <div class="game-title1">7. When I look beyond my core role and focus on final outcome, I am thinking of the bigger picture and not being <input type="text"
                                     name="ans7" id="ans7" class="login-text seventhans" maxlength="5"
                                     autocomplete="off">
                             </div>
 
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">8. It is an estimate of premium for the insurance coverage you
-                                selected and information you entered<input type="text" name="ans8" id="ans8"
-                                    class="login-text eightans" maxlength="5" autocomplete="off">
+                            <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member <input type="text" name="ans8" id="ans8"
+                                    class="login-text eightans" maxlength="5" autocomplete="off">in achieving their goals
                             </div>
 
 
@@ -667,22 +664,19 @@
                         </div>
 
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">2. It is the specific additional time you get after the due date to
-                                pay the premium and avoid a policy lapse<input type="text" name="ans2" id="ans2"
-                                    class="login-text secondans" maxlength="5" autocomplete="off"> </div>
+                            <div class="game-title1">2. A spirit of <input type="text" name="ans2" id="ans2"
+                                    class="login-text secondans" maxlength="5" autocomplete="off">with all stakeholders goes a long way in ensuring our purpose is achieved </div>
                         </div>
 
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">5. It is a contract (policy) in which an insurer indemnifies
-                                another against losses from specific contingencies or perils<input type="text"
+                            <div class="game-title1">5. I operate thinking “This is my Business and I will Play to ”<input type="text"
                                     name="ans5" id="ans5" class=" login-text fivthans" maxlength="9" autocomplete="off">
                             </div>
 
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">6. On this specific date, an investment becomes due and is paid
-                                back to the investor<input type="text" name="ans6" id="ans6"
-                                    class=" login-text sixthans" maxlength="8" autocomplete="off">
+                            <div class="game-title1">6. It is important to ensure we have clear and <input type="text" name="ans6" id="ans6"
+                                    class=" login-text sixthans" maxlength="8" autocomplete="off">communication, promoting openness without any hidden agendas
                             </div>
                         </div>
                     </div>

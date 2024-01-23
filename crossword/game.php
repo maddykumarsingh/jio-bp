@@ -618,7 +618,7 @@
                             <div class="cross-game mt-10">ACROSS</div>
                             <input class="timer" id="timerid" name="timer" type="hidden" />
                             <input name="question" value="1" type="hidden" />
-                            <!-- <input type="hidden" name="userid" value="<?php echo $_SESSION["userid"] ?>" > -->
+                           
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1" style=""> 3. Having ownership means to take <input type="text"

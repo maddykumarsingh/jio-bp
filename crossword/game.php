@@ -622,7 +622,7 @@
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1" style=""> 3. Having ownership means to take <input type="text"
-                                    name="ans3" id="ans3" class="login-text thirdans" maxlength="7" autocomplete="off">of our actions and not shying away from either positive or negative outcomes 
+                                    name="ans3" id="ans3" class="login-text thirdans" maxlength="7" autocomplete="off">of our actions and not shying away from either positive or negative outcomes.
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
@@ -640,7 +640,7 @@
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member <input type="text" name="ans8" id="ans8"
-                                    class="login-text eightans" maxlength="5" autocomplete="off">in achieving their goals
+                                    class="login-text eightans" maxlength="5" autocomplete="off">in achieving their goals.
                             </div>
 
 
@@ -659,7 +659,7 @@
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1">1. It is important for me to focus on delivering  <input type="text" name="ans1" id="ans1" class="login-text firstans"
-                                    maxlength="9" autocomplete="off">within committed timelines
+                                    maxlength="9" autocomplete="off">within committed timelines.
                             </div>
                         </div>
 
@@ -676,7 +676,7 @@
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1">6. It is important to ensure we have clear and <input type="text" name="ans6" id="ans6"
-                                    class=" login-text sixthans" maxlength="8" autocomplete="off">communication, promoting openness without any hidden agendas
+                                    class=" login-text sixthans" maxlength="8" autocomplete="off">communication, promoting openness without any hidden agendas.
                             </div>
                         </div>
                     </div>

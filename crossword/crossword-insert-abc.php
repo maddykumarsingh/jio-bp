@@ -67,6 +67,7 @@ if(function_exists('date_default_timezone_set')) {
                         }
                         //$score1=(int)$score1;
                         $data=["gameId"=>$gameId,"name"=>$name,"sessionId"=>$sessionid,"userId"=>$userid,"organizationId"=>$organizationId,"points"=>$score1,"time"=>$time,"ans"=>"$showname1"];
+                        addReportGuest($data);
                 
                     }else{
                                 $_SESSION['score']=1;
@@ -76,6 +77,7 @@ if(function_exists('date_default_timezone_set')) {
                                 echo json_encode(array("success"=>"true","isdemo"=>$tools["isdemo"]));
                                 }
                             $data=["points"=>$score1,"time"=>$time];
+                            addReport($data);
 
                         }
                 }

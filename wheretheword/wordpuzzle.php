@@ -1,5 +1,46 @@
 <?php
+
+session_start();
+include_once 'dao/config.php';
+//$_SESSION['userid']=$_SESSION['token'];
+if ($_SESSION['userid']== '') {
+    header("Location:index.php");
+}
+//  print_r($_SESSION);
+$userId=$_SESSION['userId'];
+$organizationId=$_SESSION['organizationId'];
+$sessionId=$_SESSION['sessionId'];
+
+$settings=json_decode(file_get_contents("admin/settings.js"),true)[0];
+include_once '../admin_assets/triggers.php';
+
+
+$current_theme=default_data("current_theme");
+$custom_words=default_data("custom_words");
+$custom_title=default_data("custom_title");
+$apply_custom_words=toogles("apply_custom_words");
+
+//echo $_SESSION['firstName'];
+
+if($_SESSION['firstName']=="demo"){
+    $demoprint="var isdemo=true;";
     $words=["Jars","Cans","Paper","Cardboard","Food"];
+    $gridsize=9;
+    $gametitle='[ Click and drag to highlight 5 words below ]';
+    $main_title="Do you have a mind that can Think and Act Green?<br> Identify household items that must be avoided and can be replaced with greener options";
+}else{
+    $demoprint="var isdemo=false;";
+    if($apply_custom_words){
+    $words=array_map('ucfirst', $custom_words);
+    $main_title=$custom_title;
+    }else{
+    $words=array_map('ucfirst', $settings["themesets"][$current_theme]["words"]);
+    $main_title=$settings["themesets"][$current_theme]["title"];
+    }
+    $gridsize=13;
+    $gametitle="[ Click and drag to highlight ".sizeof($words)." words below ]";
+}//
+
 ?>
 <!doctype html>
 <html>
@@ -344,11 +385,12 @@ h2#swal2-title{
 }
     </style>
 
+<?php include("../actions-default.php");  back("rules.php");?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <p class="top-title">
-                   
+                    <?php echo $main_title;?>
                 </p>
             </div>
             <div class="col-md-6 col-md-offset-3 col-xs-12 progress-container" style="margin-top:15px;">
@@ -364,10 +406,11 @@ h2#swal2-title{
         <div class="row">
             <div class="col-sm-8 col-md-7 col-lg-6 col-xs-12 plr0 auto">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 plr0">
-                    <div class="col-md-12 col-sm-12 col-xs-12 highlight-text text-center">  
+                    <div class="col-md-12 col-sm-12 col-xs-12 highlight-text text-center"><?php echo $gametitle;?>  
                     
                     <?php
-            
+            if($organizationId == '8f1c1f27-4a70-4661-8a89-9f47517172df'){
+                $main_title;
                     echo '<br>( Listening,
                        Confidante,
                        Engagement,
@@ -376,7 +419,7 @@ h2#swal2-title{
                        Feedback,
                        Connect )
                    ';
-            
+            }
 
 ?>
        </div>
@@ -392,6 +435,7 @@ h2#swal2-title{
             <div class="col-sm-8 col-md-7 col-lg-7 col-xs-12 auto">
                     <div class="row">
                     <?php 
+                    
                     for ($i=0; $i<sizeof($words); $i++){
                             echo '<div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 form-group">
                                    <input type="text" name="ans'.($i+1).'" value="" class="form-control log-text '.$words[$i].'">
@@ -417,8 +461,12 @@ h2#swal2-title{
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> -->
     <script src="js/index1.js"></script>
     <script>
-           
+            <?php echo $demoprint;?>
+    <?php 
     
+
+
+    ?>
     var wantToShow = <?php echo sizeof($words)?>;
     var target,
         seconds = 0,
@@ -437,7 +485,11 @@ h2#swal2-title{
             }
         }
 
-
+        if(isdemo){
+    if(seconds==69){
+        $('#submit').trigger('click');
+   }
+   }
    
 
         target = (hours ? (hours > 3 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" +
@@ -462,7 +514,7 @@ h2#swal2-title{
 
     var wordsArray=<?php echo json_encode($words) ?>;
     var words ="<?php echo implode(',', $words);?>";
-
+    var organizationId="<?php echo $organizationId;?>";
     var answercount=0;
     var points=0;
     var answers=[];
@@ -480,7 +532,7 @@ h2#swal2-title{
     $(document).ready(function() {
         $("#theGrid").wordsearchwidget({
             "wordlist" : words,
-            "gridsize" : 20,
+            "gridsize" : <?php echo $gridsize;?>,
             "width" : 800});
 
                     $(".button-submit").click(function(){
@@ -493,7 +545,9 @@ h2#swal2-title{
                                     var data = JSON.parse(data);
                                     if(data.success){
                                         if(data.isdemo){
-                                           
+                                            swal("Subscribe to any PLAN to play with your peers.", "", "success").then(() => {
+                                                window.location = "<?php echo $base_url?>/plans";
+                                            });
                                             
                                                 //location.href="leaderboard.php";
                                         }else{
@@ -554,7 +608,22 @@ h2#swal2-title{
         }
     }
     </script>
-
+<script>
+    $(document ).ready(function() {
+    var organizationId="<?php echo $organizationId;?>";
+    console.log(organizationId);
+    if(organizationId == '8f1c1f27-4a70-4661-8a89-9f47517172df'){
+        
+        $(".logo-holder a").attr('href', 'https://myofficeengagements.com/Raymond-Engage/index.php');
+        
+    }
+    if(organizationId == 'df0dbf83-2a5d-486e-be7e-ec55cd05ac8b'){
+        
+        $(".logo-holder a").attr('href', 'https://ask.extramileplay.com/');
+        
+    }
+});
+</script>
 </body>
 
 </html>

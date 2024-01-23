@@ -1,14 +1,22 @@
+<?php
+ob_start();
+error_reporting(0);
+session_start();
+if($_SESSION['token'] == ""){
+   header('location:index.php');
+}
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Down and Across</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-  <script src="dist/js/jquery.min.js"></script>
-  <script src="dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="dist/css/styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <style rel="stylesheet" type="text/css">
   body{
     width:100%;
@@ -70,11 +78,11 @@
   </style>
 </head>
 <body>
-
+<?php include("../actions-default.php");  back("index.php?save");?>
 
 <div class="container-fluid container-control">
 <div class="row">
-<div class="col-md-2 auto"><img src="dist/images/welcome-logo.png" class="welcome-logo"/></div>
+<div class="col-md-2 auto"><img src="images/welcome-logo.png" class="welcome-logo"/></div>
 </div>
 <div class="row">
       <div class="row">
@@ -87,8 +95,17 @@
                 <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 auto">
                     <ul type="dice" class="rule-list">
 
-                    
-                    <li>This is a crossword puzzle based on the topic of Collaboration</li>
+                    <?php 
+
+                    if($_SESSION['organizationId']=="543f589c-c00a-457d-bd30-b4ea65129057"){
+
+                        echo '<li>This is a crossword puzzle based on the topic of Life Insurance Awareness</li>';
+
+                    }else{
+
+                        echo '<li>This is a crossword puzzle based on the topic of Collaboration</li>';
+                    }
+                    ?>
 			
 			<li>Insert the answers in the text boxes</li>
 			<li>Answer correctly to earn maximum points</li>
@@ -97,8 +114,21 @@
 	</div>
 <div class="col-md-12 text-center">
 
+<?php
 
-<a href="crossword.php"><div class="btn btn-info next">Next</div></a>
+if($_SESSION['sessionId']=="demobypass"){
+  echo '<a href="crossworddemo.php"><div class="btn btn-info next">Next</div></a>';
+}else{
+ if($_SESSION['organizationId']=="543f589c-c00a-457d-bd30-b4ea65129057"){
+
+    echo '<a href="crossword-abc.php"><div class="btn btn-info next">Next</div></a>';
+
+}else{
+    echo '<a href="crossword.php"><div class="btn btn-info next">Next</div></a>';
+}
+}
+
+?>
 </div>
 </div>
 </div>

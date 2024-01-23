@@ -1,4 +1,12 @@
+<?php
 
+session_start();
+$_SESSION['userid']=$_SESSION['token'];
+if ($_SESSION['userid']== '') {
+    header("Location:index.php");
+}
+
+?>
 <!doctype html>
 <html>
     <head>
@@ -523,9 +531,19 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+<?php 
+if(isset($redirectBack)){
+    echo 'window.parent.redirectBack();';
+}
+?>
 
 
-
+   /* 
+    setTimeout(() => {
+        var modal1 = $('#closeGame', window.parent.document);
+            modal1.click();
+        }, 5000);
+        */
         
     var question_count=0;
     var wantToShow=5;
@@ -729,10 +747,82 @@ $(document).ready(function() {
                 // $('.fivthans').val(valueArray.join(''));
             });
         });
-       
+        // $(document).ready(function() {
+        // 
+        //     $('.sixthans').keyup(function() {
+        //         var wordtochar = this.value.split('');
+        //         // console.log(wordtochar);
+        //         var valueArray = $(wordtochar).map(function() {
+        //             $('.ans60').val(wordtochar[0]);
+        //             $('.ans61').val(wordtochar[1]);
+        //             $('.ans62').val(wordtochar[2]);
+        //             $('.ans63').val(wordtochar[3]);
+        //             $('.ans64').val(wordtochar[4]);
+        //             $('.ans65').val(wordtochar[5]);
+        //             $('.ans66').val(wordtochar[6]);
+        //             $('.ans67').val(wordtochar[7]);
+                  
+        //         }).get();
+        //         // $('.fivthans').val(valueArray.join(''));
+        //     });
+        // });
 
 
 
+$(document).ready(function() {
+            $('#formdata').submit(function(event) {
+                event.preventDefault();
+                var formData = new FormData($("#formdata")[0]);
+    $.ajax({
+        url: 'crossword-insert.php',
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        cache: false,
+        processData: false,
+        success: function(data) {
+            console.log(data);
+            if(data != "all"){
+                var data = JSON.parse(data);
+                var token = <?php $_SESSION['token']; ?>
+                $.ajax({
+                "url": "http://139.59.7.187//api/game-server/report/add",
+                "method": "POST",
+                "timeout": 0,
+                "headers": {
+                    //pass the token from session here
+                    "Authorization": "Bearer " + token,
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "time": data.time,
+                    "points": data.score,
+                    "round": data.showName
+                }),
+                success: function(data){
+                    console.log(data);
+                if (data.message == "REPORT ADDED SUCCESSFULLY") {
+                    swal("Thank you for submission.", "", "success").then(() => {
+                                location.href=("rating.php");
+                        });
+                }
+                else{
+                        swal("Already play.", "", "success").then(() => {
+                                location.href=("rating.php");
+                        });
+                }
+                }
+                });
+            } else {
+                        swal("Already play.", "", "success").then(() => {
+                                location.href=("rating.php");
+                        });
+                }
+            
+        }
+    });
+        });
+    });
     </script>
     </body>
 </html>

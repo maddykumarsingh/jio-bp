@@ -1,17 +1,236 @@
+<?php
+
+session_start();
+$userId=$_SESSION['userId'];
+$organizationId=$_SESSION['organizationId'];
+$sessionId=$_SESSION['sessionId'];
+$_SESSION['userid']=$userId;
+if ($_SESSION['userid']== '') {
+    header("Location:index.php");
+}
+
+if($_SESSION['firstName']=="demo"){
+    $demoprint="var isdemo=true;";
+  }else{
+    $demoprint="var isdemo=false;";
+  }
+
+?>
 <!doctype html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Down and Across</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-        <script src="dist/js/jquery.min.js"></script>
-        <script src="dist/js/bootstrap.min1.js"></script>
-        <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min1.js"></script>
+        <link href="css/font-awesome.min.css" rel="stylesheet">
 
     </head>
     <body>
+    <style type="text/css">
+    @font-face {
+    font-family: 'FiraSans-Medium';
+    src: url('fonts/FiraSans-Medium.otf');
+    }
+            .auto {
+                margin: auto;
+                float: none;
+            }
+              
+
+
+                        body{
+    font-family: 'FiraSans-Medium';
+    width:100%;
+    background-color: white;
+    background-image: url(images/background-web.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+@media (min-width:100px) and (max-width:500px){
+    body{
+        overflow: scroll;
+        background-image: url(images/background-mob.png);
+        background-repeat: repeat;
+    }
+    .desk{
+        display: none;
+    }
+    .mob{
+        display: block;
+    }
+    .container-control{
+        margin-top:45px;
+    }
+   }
+.highlight-text{
+    font-size:18px;
+    margin-top:5px;
+}
+.timer{
+    background: #e9695e;
+    color: white;
+    width: 150px;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin:0 auto;
+    display: inline-block;
+}
+.submit{
+    width:130px;
+    font-size: 18px;
+    background: #e9695e;
+    border: none;
+    color: white;
+}
    
+
+/* //crossword puzzle */
+
+.cross-game {
+    color:#ffffff !important;
+    background-image: linear-gradient(to right, #E25569 , #FB9946);
+    padding: 0px 20px !important;
+    margin-top: 0px;
+    width: 60%;
+    text-align: center;
+    border-radius:10px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+.crossword {
+    display: block;
+    background-color: rgb(32, 32, 32);
+}
+
+.square {
+    color: black;
+    margin: 0 1px 4px 0;
+    display: inline-block;
+    font-size: 16px;
+    
+    font-weight:900;
+    width: 2em;
+    height: 2em;
+    /* line-height: 1.25em; */
+    vertical-align: middle;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.char {
+    font-size: 16px !important;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0px 0 0 -1px;
+    width: 1.35em !important;
+    height: 1.45em !important;
+    text-align: center;
+    background: none;
+}
+.letter {
+    background-image: linear-gradient(to right, #E25569 , #FB9946);
+
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+@media (max-width: 320px) {
+    .square {
+        width: 0.79em!important;
+    height: 0.79em!important;
+    line-height: 0.80em!important;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 426px) {
+    .square {
+           width: 1.0em !important;
+    height: 1.0em!important;
+    line-height: 1.05em!important;
+}
+}
+@media only screen and (min-width: 427px) and (max-width: 768px) {
+    .square {
+        width: 1.4em!important;
+    height: 1.4em!important;
+    line-height: 1.5em!important;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+    .char {
+        font-size: 16px !important;
+        width: 1em !important;
+        height: 1em !important;
+
+    }
+}
+
+.mt-30{
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .char {
+        font-size: 12px !important;
+        width: 1.25em !important;
+        height: 1.25em !important;
+    }
+
+    .p0{
+        padding: 0px !important;
+    }
+    .input-text {
+        font-size: 16px !important;
+    }
+
+    .title-game {
+        font-size: 14px !important;
+        padding: 10px 20px !important;
+    }
+
+    .game-title1 {
+        font-size: 16px !important;
+    }
+}
+
+.game-title1 {
+    font-weight: 500;
+    font-size: 17px;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    color:black;
+}
+
+.log-text{
+     font-weight:bolder;
+}
+.form-control{
+                            border: 1px solid #080808;
+
+                        }
+input{
+    border: 2px solid black;
+}
+
+   </style>
+<?php include("../actions-default.php");  back("rules.php");?>
     <div class="container-fluid">
     <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12 highlight-text text-center" style="margin:20px 0px 30px;font-weight:bold;">TEASE YOUR BRAIN IN THIS FOOD FOR THOUGHT PUZZLE</div>
@@ -488,11 +707,15 @@
 
     
 
-    <script src="dist/js/sweetalert.min1.js"></script>
+    <script src="js/sweetalert.min1.js"></script>
     <script>
+<?php 
+if(isset($redirectBack)){
+    echo 'window.parent.redirectBack();';
+}
+?>
 
-
-
+    <?php echo $demoprint;?>
         
     var question_count=0;
     var wantToShow=6;
@@ -521,6 +744,14 @@ function add() {
 
 
     timer();
+
+    var democount = "<?php echo $sessionId;?>";
+        if (democount == "demobypass") {
+	var time=$("#timerid").val();
+            if (time== "00:5:00") {
+                document.getElementById("submit").click();
+            }
+        }
 
 }
 function timer() {

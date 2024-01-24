@@ -252,8 +252,7 @@
                             <div class="square"></div>
 
                             <div class="square"></div>
-                            <!--<div class="square"></div>
-					                    <div class="square"></div> -->
+                            
                         </div>
 
                         <!-- row 2 -->
@@ -293,25 +292,6 @@
                         </div>
                         <div class="">
                             <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square letter">
-                                <input class="char ans21" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square letter">
-                                <input class="char ans13" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square">5</div>
-                            <div class="square"></div>
-
-                            <div class="square"></div>
                         </div>
 
                         <!-- row 4 -->
@@ -321,10 +301,10 @@
                                 <input class="char ans40" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans41" type="text" maxlength="1" readonly>
+                                <input class="char ans41 ans21" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans42 ans22" type="text" maxlength="1" readonly>
+                                <input class="char ans42" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans43" type="text" maxlength="1" readonly>
@@ -340,7 +320,7 @@
                             </div>
 
                             <div class="square letter">
-                                <input class="char ans47 ans10" type="text" maxlength="1" readonly>
+                                <input class="char ans47" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans48" type="text" maxlength="1" readonly>
@@ -348,13 +328,7 @@
                             <div class="square letter">
                                 <input class="char ans49" type="text" maxlength="1" readonly>
                             </div>
-                            <div class="square letter">
-                                <input class="char ans410 ans50" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans411" type="text" maxlength="1" readonly>
-                            </div>
-
+                     
                             <div class="square"></div>
 
                         </div>
@@ -868,9 +842,10 @@ $(document).ready(function() {
                     $('.ans43').val(wordtochar[3]);
                     $('.ans44').val(wordtochar[4]);
                     $('.ans45').val(wordtochar[5]);
-                    // $('.ans46').val(wordtochar[6]);
-                    // $('.ans47').val(wordtochar[7]);
-                    // $('.ans48').val(wordtochar[8]);
+                    $('.ans46').val(wordtochar[6]);
+                    $('.ans47').val(wordtochar[7]);
+                    $('.ans48').val(wordtochar[8]);
+                    $('.ans49').val(wordtochar[9]);
 
                 }).get();
                

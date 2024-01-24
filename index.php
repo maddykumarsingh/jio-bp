@@ -1,11 +1,8 @@
 <?php 
-
-session_start();
-
+    session_start();
     if( !$_SESSION['username'] ){
-         header('Location:login.php');
+            header('Location:login.php');
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +14,29 @@ session_start();
 </head>
 <body>
 
-    <a href="./crossword">
-       Cross Word
+<div style="    display: flex;
+    flex-direction: column;
+    align-items: baseline;">
+<a style="text-decoration: none;
+    padding: 16px 35px;
+    background: #00943b;
+    color: white;
+    margin: 10px;" href="./crossword">
+       Down and Accross 
     </a>
 
-    <a href="">
-       Amazing Word
+    <a style="text-decoration: none;
+    padding: 16px 35px;
+    background: #00943b;
+    color: white;
+    margin: 10px;" href="./wheretheword">
+       Where is the Word
     </a>
 
-    <a href="">
-        Word
-    </a>
     
+    
+</div>
+
+   
 </body>
 </html>

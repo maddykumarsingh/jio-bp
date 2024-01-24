@@ -4,11 +4,9 @@ session_start();
 include_once 'dao/config.php';
 include_once '../add_report.php';
 
- $userid = $_SESSION['email'];
+ $username = $_SESSION['username'];
  $question = $_POST['question'];
-$organizationId=$_SESSION['organizationId'];
-$sessionid=$_SESSION['sessionId'];
-$name=$_SESSION['firstName']." ".$_SESSION['lastName'];
+
 if(function_exists('date_default_timezone_set')) {
     date_default_timezone_set("Asia/Kolkata");
 }
@@ -50,7 +48,7 @@ if(function_exists('date_default_timezone_set')) {
         			echo json_encode(array("success"=>"true","isdemo"=>$tools["isdemo"]));
     				}
       			 $data=["points"=>$score1,"time"=>$time];
-       			addReport($data);
+       		
 
 			}
 

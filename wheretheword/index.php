@@ -18,28 +18,18 @@
     </style>
 </head>
 
-<body>
-
-    <div class="container-fluid container-control">
-        <div class="row">
-
-
-                <div class="col-sm-5 col-md-5 col-lg-5 col-xs-12 auto"><img src="images/respect_logo.png?v=1" class="welcome-logo" /></div>
-
-
-            <div class="col-md-2 auto"></div>
-            <div class="col-md-8 auto"><img src="images/welcome-logo.gif" class="welcome-logo" /></div>
-            <div class="col-md-2 auto"></div>
-
-            <div class="col-md-12 text-center">
-              
-            </div>
-            <a href="rules.php"><div class="btn btn-info begin">BEGIN PLAY</div></a>
-        </div>
-    </div>
-
-
-
+<body style="background-image: url(images/background.png); width:100vw; height:100vh; ">
+ <header>
+     <img width="100%" src="images/header-logo.png" alt="">
+ </header>
+ <div  class="container-fluid container-contro" style="    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;">
+          <img  src="images/welcome-logo.png" class="welcome-logo" />
+            <a href="wordpuzzle.php"><div class="btn btn-info begin">BEGIN PLAY</div></a>
+ </div>
 </body>
 
 </html>

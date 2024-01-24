@@ -10,6 +10,7 @@
     .auto {
         margin: auto;
         float: none;
+        
     }
 
 
@@ -56,10 +57,14 @@
 
     .submit {
         width: 130px;
-        font-size: 18px;
-        background: #e9695e;
-        border: none;
-        color: white;
+    font-size: 18px;
+    background: #00943b;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    margin-top: 30px;
     }
 
 

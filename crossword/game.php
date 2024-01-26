@@ -211,6 +211,10 @@
         border: 2px solid black;
     }
 
+    .question{
+        margin-bottom: 15px;
+    }
+
 
     </style>
 
@@ -453,7 +457,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans33" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -484,7 +488,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans33" type="text" maxlength="1" readonly>
+                                <input class="char ans34" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -519,7 +523,7 @@
                                 <input class="char ans62" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans63 ans33" type="text" maxlength="1" readonly>
+                                <input class="char ans63 ans35" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans64 " type="text" maxlength="1" readonly>
@@ -528,19 +532,19 @@
                                 <input class="char ans65 " type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
+                                <input class="char ans66 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
                                 <input class="char ans67 " type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans68 " type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans69 " type="text" maxlength="1" readonly>
+                                <input class="char ans69 ans52 " type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans610 ans52 " type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans611 " type="text" maxlength="1" readonly>
+                                <input class="char ans610 " type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -561,7 +565,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans36" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -582,6 +586,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square">7</div>
                             <div class="square letter">
                                 <input class="char ans70" type="text" maxlength="1" readonly>
@@ -599,10 +604,10 @@
                                 <input class="char ans74" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans75" type="text" maxlength="1" readonly>
+                                <input class="char ans75 ans37" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans76 ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans76" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans77" type="text" maxlength="1" readonly>
@@ -626,11 +631,9 @@
                                 <input class="char ans713" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans714" type="text" maxlength="1" readonly>
+                                <input class="char ans714 ans80" type="text" maxlength="1" readonly>
                             </div>
-                            <div class="square letter">
-                                <input class="char ans715 ans80" type="text" maxlength="1" readonly>
-                            </div>
+                           
                         </div>
 
                                    <!-- row-13 -->
@@ -646,7 +649,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans38" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -676,7 +679,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans39" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -708,7 +711,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans310" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -739,7 +742,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans311" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -770,7 +773,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans312" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -802,7 +805,7 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
+                                <input class="char ans313" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
@@ -831,53 +834,53 @@
                             <input name="question" value="1" type="hidden" />
                            
                         </div>
-                        <div class="row">
+                        <div class="row question">
                             <div class="game-title1"> 4. To align my work and personal life well such that it benefits my colleagues and company, I must learn to <input type="text"
                                     name="ans4" id="ans4" class="login-text fourthans " maxlength="10" autocomplete="off"> .
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row question">
                             <div class="game-title1">6. It is important to ensure we have clear and  <input type="text" name="ans4" id="ans4"
-                                    class="login-text " maxlength="10" autocomplete="off">communication
+                                    class="login-text sixthans " maxlength="11" autocomplete="off">communication
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row question">
                             <div class="game-title1">7. When I look beyond my core role and focus on final outcome, I am thinking of the bigger picture and not being <input type="text"
-                                    name="ans7" id="ans7" class="login-text seventhans" maxlength="5"
+                                    name="ans7" id="ans7" class="login-text seventhans" maxlength="16"
                                     autocomplete="off">
                             </div>
                         </div>
                     
 
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row">
                             <div class="cross-game mt-30">DOWN</div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row question">
                             <div class="game-title1">1. It is important for me to focus on delivering  <input type="text" name="ans1" id="ans1" class="login-text firstans"
                                     maxlength="7" autocomplete="off">within committed timelines.
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row question">
                             <div class="game-title1">2. A spirit of <input type="text" name="ans2" id="ans2"
                                     class="login-text secondans" maxlength="5" autocomplete="off">with all stakeholders goes a long way in ensuring our purpose is achieved. </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row question">
                             <div class="game-title1">3.  Having ownership means to take<input type="text"
                                     name="ans5" id="ans5" class=" login-text thirdans" maxlength="14" autocomplete="off"> of our actions and not shying away from either positive or negative outcomes.
                             </div>
 
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row question">
                             <div class="game-title1">5. I operate thinking “This is my Business and I will Play to <input type="text" name="ans6" id="ans6"
-                                    class=" login-text fifthans" maxlength="11" autocomplete="off">".
+                                    class=" login-text fifthans" maxlength="3" autocomplete="off">".
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row question">
                             <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member  <input type="text" name="ans6" id="ans6"
-                                    class=" login-text fifthans" maxlength="11" autocomplete="off"> in achieving their goals.
+                                    class=" login-text eightans" maxlength="7" autocomplete="off"> in achieving their goals.
                             </div>
                         </div>
                 </div>
@@ -1030,6 +1033,7 @@ $(document).ready(function() {
                     $('.ans310').val(wordtochar[10]);
                     $('.ans311').val(wordtochar[11]);
                     $('.ans312').val(wordtochar[12]);
+                    $('.ans313').val(wordtochar[13]);
 
                     // $('.thirdans').val(valueArray.join(''));
                 }).get();
@@ -1068,7 +1072,7 @@ $(document).ready(function() {
             });
         });
         $(document).ready(function() {
-            $('.fivthans').change(function() {
+            $('.fifthans').change(function() {
                 var fivthans=$(this).val().toLowerCase();
 		if($(this).val().length == 8) {
  			question_count=question_count+1;
@@ -1077,17 +1081,12 @@ $(document).ready(function() {
 
  
             });
-            $('.fivthans').keyup(function() {
+            $('.fifthans').keyup(function() {
                 var wordtochar = this.value.split('');
-                // console.log(wordtochar);
                 var valueArray = $(wordtochar).map(function() {
                     $('.ans50').val(wordtochar[0]);
                     $('.ans51').val(wordtochar[1]);
                     $('.ans52').val(wordtochar[2]);
-                    // $('.ans58').val(wordtochar[8]);
-                    // $('.ans59').val(wordtochar[9]);
-                    // $('.ans510').val(wordtochar[10]);
-                    // // $('.ans511').val(wordtochar[11]);
 
                 }).get();
                
@@ -1121,7 +1120,76 @@ $(document).ready(function() {
                     $('.ans68').val(wordtochar[8]);
                     $('.ans69').val(wordtochar[9]);
                     $('.ans610').val(wordtochar[10]);
-                    $('.ans610').val(wordtochar[10]);
+                    $('.ans611').val(wordtochar[11]);
+                  
+                }).get();
+                // $('.fivthans').val(valueArray.join(''));
+            });
+        });
+
+
+        $(document).ready(function() {
+            var sum = [];
+ 	   $('.seventhans').change(function() {
+                var fivthans=$(this).val().toLowerCase();
+		if($(this).val().length == 11) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+
+
+            });
+
+            $('.seventhans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                    $('.ans70').val(wordtochar[0]);
+                    $('.ans71').val(wordtochar[1]);
+                    $('.ans72').val(wordtochar[2]);
+                    $('.ans73').val(wordtochar[3]);
+                    $('.ans74').val(wordtochar[4]);
+                    $('.ans75').val(wordtochar[5]);
+                    $('.ans76').val(wordtochar[6]);
+                    $('.ans77').val(wordtochar[7]);
+                    $('.ans78').val(wordtochar[8]);
+                    $('.ans79').val(wordtochar[9]);
+                    $('.ans710').val(wordtochar[10]);
+                    $('.ans711').val(wordtochar[11]);
+                    $('.ans712').val(wordtochar[12]);
+                    $('.ans713').val(wordtochar[13]);
+                    $('.ans714').val(wordtochar[14]);
+                  
+                }).get();
+                // $('.fivthans').val(valueArray.join(''));
+            });
+        });
+
+
+
+        $(document).ready(function() {
+            var sum = [];
+ 	   $('.eightans').change(function() {
+                var fivthans=$(this).val().toLowerCase();
+		if($(this).val().length == 11) {
+ 			question_count=question_count+1;
+     			progressBar(question_count);
+		}
+
+
+            });
+
+            $('.eightans').keyup(function() {
+                var wordtochar = this.value.split('');
+                // console.log(wordtochar);
+                var valueArray = $(wordtochar).map(function() {
+                    $('.ans80').val(wordtochar[0]);
+                    $('.ans81').val(wordtochar[1]);
+                    $('.ans82').val(wordtochar[2]);
+                    $('.ans83').val(wordtochar[3]);
+                    $('.ans84').val(wordtochar[4]);
+                    $('.ans85').val(wordtochar[5]);
+                    $('.ans86').val(wordtochar[6]);
                   
                 }).get();
                 // $('.fivthans').val(valueArray.join(''));

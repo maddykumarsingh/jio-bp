@@ -57,18 +57,17 @@
 
     .submit {
         width: 130px;
-    font-size: 18px;
-    background: #00943b;
-    border: none;
-    color: white;
-    padding: 8px 10px;
-    border-radius: 5px;
-    margin: 10px;
-    margin-top: 30px;
+        font-size: 18px;
+        background: #00943b;
+        border: none;
+        color: white;
+        padding: 8px 10px;
+        border-radius: 5px;
+        margin: 10px;
+        margin-top: 30px;
     }
 
 
-    /* //crossword puzzle */
 
     .cross-game {
         margin-top: 40px;
@@ -96,7 +95,6 @@
         font-weight: 900;
         width: 1.9em;
         height: 1.9em;
-        /* line-height: 1.25em; */
         vertical-align: middle;
         text-align: center;
         -webkit-touch-callout: none;
@@ -218,31 +216,43 @@
 
 
 <form method="post" id="formdata" name="formdata">
-            <div class="row" style="margin-top:10px; margin-bottom:40px;">
-                <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 plr0">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 p0" id="crossword">
-                        <div class="">
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square">1</div>
-                        </div>
+            <div class="row game-play" style="margin-top:10px; margin-bottom:40px;">
 
-                        <!-- row 1 -->
-                        <div class="">
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square">2</div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
+            <div class="col-md-6 col-xs-12 col-lg-6 col-sm-12">
 
+                <!-- row 1 -->
+                <div >
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square">1</div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+                   <div class="square"></div>
+               </div>
+
+
+                         <!-- row 2 -->
+                         <div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square letter">
                                 <input class="char ans10" type="text" maxlength="1" readonly>
                             </div>
@@ -250,14 +260,73 @@
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
-
                             <div class="square"></div>
-                            
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                         </div>
 
-                        <!-- row 2 -->
-                        <div class="">
+
+
+                        <!-- row-3 -->
+                        <div>
                             <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans11" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                        </div>
+
+                        <!-- row 4-->
+                        <div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square">2</div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans12" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square">3</div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                        </div>
+
+                         <!-- row 5 -->
+                         <div >
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
@@ -265,117 +334,257 @@
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
-                            <div class="square">3</div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans13" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square letter">
                                 <input class="char ans30" type="text" maxlength="1" readonly>
                             </div>
-                            <div class="square letter">
-                                <input class="char ans31 ans11" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans32" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans33" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans34" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans35" type="text" maxlength="1" readonly>
-                            </div>
-
-                            <div class="square letter">
-                                <input class="char ans36" type="text" maxlength="1" readonly>
-                            </div>
-                            <!-- row 3 -->
-                        </div>
-                        <div class="">
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square"></div>
                         </div>
 
-                        <!-- row 4 -->
-                        <div class="">
+
+
+                         <!-- row 6 -->
+                         <div >
                             <div class="square">4</div>
                             <div class="square letter">
                                 <input class="char ans40" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans41 ans21" type="text" maxlength="1" readonly>
+                                <input class="char ans21 ans41" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans42" type="text" maxlength="1" readonly>
+                                <input class="char  ans42" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans43" type="text" maxlength="1" readonly>
+                                <input class="char  ans43" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans44" type="text" maxlength="1" readonly>
+                                <input class="char  ans44" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans45" type="text" maxlength="1" readonly>
+                                <input class="char ans14 ans45" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans46" type="text" maxlength="1" readonly>
+                                <input class="char  ans46" type="text" maxlength="1" readonly>
                             </div>
-
                             <div class="square letter">
                                 <input class="char ans47" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans48" type="text" maxlength="1" readonly>
+                                <input class="char  ans48" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans49" type="text" maxlength="1" readonly>
+                                <input class="char ans31 ans49" type="text" maxlength="1" readonly>
                             </div>
-                     
                             <div class="square"></div>
-
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                         </div>
 
-                        <!-- row 5 -->
-                        <div class="">
+
+
+
+                        <!-- row-7 -->
+                        <div >
                             <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans22" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans15" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square">5</div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                        </div>
+
+
+
+                         <!-- row-8 -->
+                         <div >
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
                                 <input class="char ans23" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
-                            <div class="square">6</div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square letter">
-                                <input class="char ans14" type="text" maxlength="1" readonly>
-                            </div>
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans51" type="text" maxlength="1" readonly>
+                                <input class="char ans16" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
-
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans50" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square"></div>
                         </div>
 
-                        <!-- row 6 -->
-                        <div class="">
-                            <div class="square"></div>
+
+                         <!-- row-9 -->
+                         <div >
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
                                 <input class="char ans24" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans33" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans51" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                        </div>
+
+
+                         <!-- row-10 -->
+                         <div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square">6</div>
                             <div class="square letter">
                                 <input class="char ans60" type="text" maxlength="1" readonly>
                             </div>
+                            <div class="square letter">
+                                <input class="char ans61" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans62" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans63 ans33" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans64 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans65 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans67 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans68 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans69 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans610 ans52 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans611 " type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                        </div>
+
+
+
+<!-- row-11 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square">8</div>
+                        </div>
+
+
+
+
+                        <!-- row-12 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square"></div>
                             <div class="square">7</div>
-
                             <div class="square letter">
-                                <input class="char ans70 ans15" type="text" maxlength="1" readonly>
+                                <input class="char ans70" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans71" type="text" maxlength="1" readonly>
@@ -384,283 +593,295 @@
                                 <input class="char ans72" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
-                                <input class="char ans73 ans52" type="text" maxlength="1" readonly>
+                                <input class="char ans73" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square letter">
                                 <input class="char ans74" type="text" maxlength="1" readonly>
                             </div>
-
-                            <div class="square"></div>
-
+                            <div class="square letter">
+                                <input class="char ans75" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans76 ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans77" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans78" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans79" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans710" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans711" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans712" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans713" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans714" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square letter">
+                                <input class="char ans715 ans80" type="text" maxlength="1" readonly>
+                            </div>
                         </div>
 
-                        <!-- row 7 -->
-                        <div class="">
+                                   <!-- row-13 -->
+                                   <div >
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
-
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans61" type="text" maxlength="1" readonly>
+                                <input class="char ans32" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
-
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans17" type="text" maxlength="1" readonly>
+                                <input class="char ans81" type="text" maxlength="1" readonly>
                             </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square letter">
-                                <input class="char ans53" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
                         </div>
 
-                        <!-- row 8 -->
-                        <div class="">
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
 
-                            <div class="square"></div>
-                            <div class="square letter">
-                                <input class="char ans62" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
 
+                        <!-- row-14 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans17" type="text" maxlength="1" readonly>
+                                <input class="char ans32" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
-
-                            <div class="square letter">
-                                <input class="char ans54" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                        </div>
-                        <!-- row 9 -->
-                        <div class="">
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
-                            <div class="square">8</div>
-                            <div class="square letter">
-                                <input class="char ans80" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans81 ans63" type="text" maxlength="1" readonly>
-                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square letter">
                                 <input class="char ans82" type="text" maxlength="1" readonly>
                             </div>
+                        </div>
+
+
+
+
+
+                        <!-- row-15 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square letter">
                                 <input class="char ans83" type="text" maxlength="1" readonly>
                             </div>
-
-                            <div class="square letter">
-                                <input class="char ans84 ans18" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square letter">
-                                <input class="char ans55" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                        </div>
-                        <!-- row 10 -->
-                        <div class="">
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square"></div>
-                            <div class="square letter">
-                                <input class="char ans64" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square letter">
-                                <input class="char ans56" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                        </div>
-                        <!-- row 11 -->
-                        <div class="">
-                            <div class="square">9</div>
-                            <div class="square letter">
-                                <input class="char ans90" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans91" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans92" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans93" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans94 ans65" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans95 " type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans96" type="text" maxlength="1" readonly>
-                            </div>
-
-                            <div class="square letter">
-                                <input class="char ans97" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square letter">
-                                <input class="char ans98" type="text" maxlength="1" readonly>
-                            </div>
-
-                            <div class="square"></div>
-                            <div class="square letter">
-                                <input class="char ans57" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                        </div>
-                        <!-- row 12 -->
-                        <div class="">
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square"></div>
-                            <div class="square letter">
-                                <input class="char ans66" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-                            <div class="square letter">
-                                <input class="char ans58" type="text" maxlength="1" readonly>
-                            </div>
-                            <div class="square"></div>
-                            <div class="square"></div>
-
                         </div>
 
-                        <div class="">
-                            <div class="square"></div>
-                            <div class="square"></div>
 
-                            <div class="square"></div>
-                            <div class="square"></div>
 
+
+                        <!-- row-16 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
                             <div class="square"></div>
                             <div class="square letter">
-                                <input class="char ans67" type="text" maxlength="1" readonly>
+                                <input class="char ans32" type="text" maxlength="1" readonly>
                             </div>
                             <div class="square"></div>
                             <div class="square"></div>
-
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
                             <div class="square"></div>
-
                             <div class="square"></div>
                             <div class="square"></div>
-
+                            <div class="square letter">
+                                <input class="char ans84" type="text" maxlength="1" readonly>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+
+
+
+                        <!-- row-17 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans85" type="text" maxlength="1" readonly>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- row-18 -->
+<div >
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans32" type="text" maxlength="1" readonly>
+                            </div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square"></div>
+                            <div class="square letter">
+                                <input class="char ans86" type="text" maxlength="1" readonly>
+                            </div>
+                        </div>
+ 
+ 
+
+            </div>
+
+
+                       
+
                 <div class="col-sm-6 col-md-6 col-lg-5 col-xs-12">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row">
                             <div class="cross-game mt-10">ACROSS</div>
                             <input class="timer" id="timerid" name="timer" type="hidden" />
                             <input name="question" value="1" type="hidden" />
                            
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1" style=""> 3. Having ownership means to take <input type="text"
-                                    name="ans3" id="ans3" class="login-text thirdans" maxlength="7" autocomplete="off">of our actions and not shying away from either positive or negative outcomes.
+                        <div class="row">
+                            <div class="game-title1"> 4. To align my work and personal life well such that it benefits my colleagues and company, I must learn to <input type="text"
+                                    name="ans4" id="ans4" class="login-text fourthans " maxlength="10" autocomplete="off"> .
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">4. To align my work and personal life well such that it benefits my colleagues and company, I must learn to <input type="text" name="ans4" id="ans4"
-                                    class="login-text  fourthans" maxlength="12" autocomplete="off">
+                        <div class="row">
+                            <div class="game-title1">6. It is important to ensure we have clear and  <input type="text" name="ans4" id="ans4"
+                                    class="login-text " maxlength="10" autocomplete="off">communication
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                        <div class="row">
                             <div class="game-title1">7. When I look beyond my core role and focus on final outcome, I am thinking of the bigger picture and not being <input type="text"
                                     name="ans7" id="ans7" class="login-text seventhans" maxlength="5"
                                     autocomplete="off">
                             </div>
-
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member <input type="text" name="ans8" id="ans8"
-                                    class="login-text eightans" maxlength="5" autocomplete="off">in achieving their goals.
-                            </div>
+                    
 
-
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">9. It is the formal ending of a reinsurance agreement by its
-                                natural expiration, cancellation, or commutation by the parties<input type="text"
-                                    name="ans9" id="ans9" class="login-text ninthans" maxlength="9" autocomplete="off">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="cross-game mt-30">DOWN</div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1">1. It is important for me to focus on delivering  <input type="text" name="ans1" id="ans1" class="login-text firstans"
-                                    maxlength="9" autocomplete="off">within committed timelines.
+                                    maxlength="7" autocomplete="off">within committed timelines.
                             </div>
                         </div>
 
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
                             <div class="game-title1">2. A spirit of <input type="text" name="ans2" id="ans2"
-                                    class="login-text secondans" maxlength="5" autocomplete="off">with all stakeholders goes a long way in ensuring our purpose is achieved </div>
+                                    class="login-text secondans" maxlength="5" autocomplete="off">with all stakeholders goes a long way in ensuring our purpose is achieved. </div>
                         </div>
 
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">5. I operate thinking “This is my Business and I will Play to ”<input type="text"
-                                    name="ans5" id="ans5" class=" login-text fivthans" maxlength="9" autocomplete="off">
+                            <div class="game-title1">3.  Having ownership means to take<input type="text"
+                                    name="ans5" id="ans5" class=" login-text thirdans" maxlength="14" autocomplete="off"> of our actions and not shying away from either positive or negative outcomes.
                             </div>
 
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
-                            <div class="game-title1">6. It is important to ensure we have clear and <input type="text" name="ans6" id="ans6"
-                                    class=" login-text sixthans" maxlength="8" autocomplete="off">communication, promoting openness without any hidden agendas.
+                            <div class="game-title1">5. I operate thinking “This is my Business and I will Play to <input type="text" name="ans6" id="ans6"
+                                    class=" login-text fifthans" maxlength="11" autocomplete="off">".
                             </div>
                         </div>
-                    </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                            <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member  <input type="text" name="ans6" id="ans6"
+                                    class=" login-text fifthans" maxlength="11" autocomplete="off"> in achieving their goals.
+                            </div>
+                        </div>
+                </div>
+            </div>
 
                     <div class="row">
                         <div class="col-sm-3 col-md-3 col-lg-3 col-xs-5 auto">
@@ -668,10 +889,7 @@
                                 class="button-submit submit">
                         </div>
                     </div>
-                </div>
 
-            </div>
-    </div>
 
     </div>
     </div>
@@ -748,9 +966,9 @@ $(document).ready(function() {
                     $('.ans11').val(wordtochar[1]);
                     $('.ans12').val(wordtochar[2]);
                     $('.ans13').val(wordtochar[3]);
-                    // $('.ans14').val(wordtochar[4]);
-                    // $('.ans15').val(wordtochar[5]);
-                    // $('.ans16').val(wordtochar[6]);
+                     $('.ans14').val(wordtochar[4]);
+                     $('.ans15').val(wordtochar[5]);
+                     $('.ans16').val(wordtochar[6]);
                     // $('.ans17').val(wordtochar[7]);
                     // $('.ans18').val(wordtochar[8]);
                     // $('.ans19').val(wordtochar[9]);
@@ -778,9 +996,6 @@ $(document).ready(function() {
                     $('.ans22').val(wordtochar[2]);
                     $('.ans23').val(wordtochar[3]);
                     $('.ans24').val(wordtochar[4]);
-                    $('.ans25').val(wordtochar[5]);
-                    $('.ans26').val(wordtochar[6]);
-                    // $('.ans27').val(wordtochar[7]);
                 }).get();
                
                 // $('.secondans').val(valueArray.join(''));
@@ -869,11 +1084,6 @@ $(document).ready(function() {
                     $('.ans50').val(wordtochar[0]);
                     $('.ans51').val(wordtochar[1]);
                     $('.ans52').val(wordtochar[2]);
-                    $('.ans53').val(wordtochar[3]);
-                    $('.ans54').val(wordtochar[4]);
-                    $('.ans55').val(wordtochar[5]);
-                    $('.ans56').val(wordtochar[6]);
-                    $('.ans57').val(wordtochar[7]);
                     // $('.ans58').val(wordtochar[8]);
                     // $('.ans59').val(wordtochar[9]);
                     // $('.ans510').val(wordtochar[10]);
@@ -910,6 +1120,7 @@ $(document).ready(function() {
                     $('.ans67').val(wordtochar[7]);
                     $('.ans68').val(wordtochar[8]);
                     $('.ans69').val(wordtochar[9]);
+                    $('.ans610').val(wordtochar[10]);
                     $('.ans610').val(wordtochar[10]);
                   
                 }).get();

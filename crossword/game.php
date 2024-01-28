@@ -123,11 +123,21 @@
         border: 0.5px solid black;
     }
 
+    .row {
+    margin-right: 0px;
+     margin-left: 0px;
+}
+
     @media (max-width: 320px) {
         .square {
             width: 0.79em !important;
             height: 0.79em !important;
             line-height: 0.80em !important;
+            font-size: 13px;
+        }
+
+        .char {
+             font-size: 8px !important;
         }
     }
 
@@ -136,6 +146,11 @@
             width: 1.0em !important;
             height: 1.0em !important;
             line-height: 1.05em !important;
+            font-size: 13px;
+        }
+        
+        .char {
+             font-size: 8px !important;
         }
     }
 
@@ -144,6 +159,7 @@
             width: 1.4em !important;
             height: 1.4em !important;
             line-height: 1.5em !important;
+            font-size: 13px;
         }
     }
 
@@ -222,7 +238,7 @@
 <form method="post" id="formdata" name="formdata">
             <div class="row game-play" style="margin-top:10px; margin-bottom:40px;">
 
-            <div class="col-md-6 col-xs-12 col-lg-6 col-sm-12">
+            <div class="col-md-6 col-xs-12 col-lg-6 col-sm-12" style="text-align: center;">
 
                 <!-- row 1 -->
                 <div >

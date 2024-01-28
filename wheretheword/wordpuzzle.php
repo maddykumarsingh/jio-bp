@@ -32,10 +32,10 @@
     .rf-tgrid {
         font-family: Arial;
         font-weight: 700;
-        font-size: 20px;
+        font-size: 16px;
         margin: 1px;
         color: black;
-        padding: 8px 20px !important;
+        padding: 4px 8px !important;
         /* border: 1px solid bisque; */
         vertical-align: middle;
         text-align: center;
@@ -349,7 +349,7 @@ h2#swal2-title{
     <div >
          <img width="100%" src="images/header-logo.png" alt="">
     </div>
-    <div style="text-align: center;font-size:xx-large; margin:40px 2px;">
+    <div style="text-align: center;font-size:xx-large;">
          Identify 7 key behaviours that reflect an ownership mindset   
     </div>
 
@@ -383,10 +383,10 @@ h2#swal2-title{
         <div class="row">
 
             <div class="col-sm-8 col-md-7 col-lg-7 col-xs-12 auto">
-                    <div class="row">
+                    <div class="row" style="display: flex; flex-wrap:wrap">
                     <?php 
                     for ($i=0; $i<sizeof($words); $i++){
-                            echo '<div class="col-sm-4 col-md-4 col-lg-4 col-xs-6 form-group">
+                            echo '<div>
                                    <input type="text" name="ans'.($i+1).'" value="" class="form-control log-text '.$words[$i].'">
                                  </div>';
                     }
@@ -394,7 +394,7 @@ h2#swal2-title{
                     </div>
                     <div class="row show-btn">
                         <div class="col-sm-4 col-md-3 col-lg-3 col-xs-8 auto">
-                            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 ">
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12 " style="text-align: center;">
                                 <input type="button" id="submit" value="Submit" 
                                     class="button-submit submit" style="margin-bottom:10px;">
                             </div>

@@ -1,8 +1,14 @@
-<?php 
-    session_start();
-    if( !$_SESSION['username'] ){
-            header('Location:login.php');
-    }
+<?php
+session_start(); // Start the session
+
+// Check if the required session variables are not set
+if (!isset($_SESSION['name']) || !isset($_SESSION['email']) || !isset($_SESSION['employeeId'])) {
+    // Redirect to the login page
+    header("Location: login.php");
+    exit(); // Ensure that no other code is executed after the redirect
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,22 +26,34 @@
         }
         
         .list {
-            height: 100%;
             width: 100%;
+            margin-top: 5%;
             display: flex;
             justify-content: center;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
         }
 
 
         .item {
             text-decoration: none;
-            padding: 16px 35px;
-            background: #00943b;
             color: white;
+            background-color:#cee69f;
             margin: 10px;
             border-radius: 10px;
+            width:250px; 
+            height:200px;
+            padding:10px; 
+            cursor: pointer;
+        }
+
+        .item > a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
 
     </style>
@@ -44,18 +62,24 @@
 <div >
          <img width="100%" src="./crossword/dist/images/header-logo.png" alt="">
     </div>
-<div class="list">
-<a class="item" href="./crossword">
-       Down and Accross 
-    </a>
 
-    <a class="item" href="./wheretheword">
-       Where is the Word
-    </a>
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+        <img width="80%" src="./dist/images/header.png" alt="">
+    </div>
 
-    
-    
-</div>
+     <div class="list">
+            <div  class="item" >
+                <a href="./crossword">
+                    <img width="50%" src="./crossword/dist/images/welcome-logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="item">
+                    <a  href="./wheretheword">
+                    <img width="50%" src="./wheretheword/images/welcome-logo.png" alt="">
+                    </a>
+            </div>
+        </div>
 
    
 </body>

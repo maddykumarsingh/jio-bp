@@ -856,7 +856,7 @@
                             </div>
                         </div>
                         <div class="row question">
-                            <div class="game-title1">6. It is important to ensure we have clear and  <input type="text" name="ans4" id="ans4"
+                            <div class="game-title1">6. It is important to ensure we have clear and  <input type="text" name="ans6" id="ans6"
                                     class="login-text sixthans " maxlength="11" autocomplete="off">communication
                             </div>
                         </div>
@@ -885,12 +885,12 @@
 
                         <div class="row question">
                             <div class="game-title1">3.  Having ownership means to take<input type="text"
-                                    name="ans5" id="ans5" class=" login-text thirdans" maxlength="14" autocomplete="off"> of our actions and not shying away from either positive or negative outcomes.
+                                    name="ans3" id="ans3" class=" login-text thirdans" maxlength="14" autocomplete="off"> of our actions and not shying away from either positive or negative outcomes.
                             </div>
 
                         </div>
                         <div class="row question">
-                            <div class="game-title1">5. I operate thinking “This is my Business and I will Play to <input type="text" name="ans6" id="ans6"
+                            <div class="game-title1">5. I operate thinking “This is my Business and I will Play to <input type="text" name="ans5" id="ans5"
                                     class=" login-text fifthans" maxlength="3" autocomplete="off">".
                             </div>
                         </div>
@@ -1218,6 +1218,7 @@ $(document).ready(function() {
             $('#formdata').submit(function(event) {
                 event.preventDefault();
                 var formData = new FormData($("#formdata")[0]);
+                console.log(formData);
     $.ajax({
         url: "crossword-insert.php",
         type: "POST",
@@ -1238,7 +1239,7 @@ $(document).ready(function() {
                 } else if(d==1) {
                     swal("Thank you for playing.Subscribe to any PLAN to play with your peers.", "",
                         "success").then(() => {
-                            location.href = ("https://extramileplay.com/plans");
+                            location.href = ("./");
                     });
                 }
 

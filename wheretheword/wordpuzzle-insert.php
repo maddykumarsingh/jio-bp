@@ -1,60 +1,37 @@
 <?php
 session_start();
-include_once 'dao/config.php';
-include_once '../add_report.php';
+include_once('../config/database.php');
 
- $userid = $_SESSION['userId'];
- $gameId = $_SESSION['gameId'];
- 
- $organizationId = $_SESSION['organizationId'];
- $sessionId=$_SESSION['sessionId'];
- 
- $_SESSION['yourscore'] =  $_POST['points'];
 
  $time=$_POST["time"];
- $points=$_POST["points"];
+ $score=$_POST["points"];
  $answers=$_POST["answers"];
- $fullName=$_SESSION['firstName']." ".$_SESSION['lastName'];
- $roles=$_SESSION['roles'];
+ $username=$_SESSION['employeeId'];
+ $session = $_SESSION['session'];
+
+
+
  
 
-        $timestamp = date('Y-m-d H:i:s');
-        $query= "INSERT INTO `wordpuzzle`(`userid`, `organizationId`, `sessionId`,`email`,`name`, `wordpuzzle_ans`, `time`, `points`,`user_type`, `timestamp`,`method`) VALUES ('$userid','$organizationId','$sessionId','$email','$fullName','$answers','$time','$points','$roles','$timestamp','free')";
-        if($con->query($query)){
-            if($roles=="GUEST_USER"){
-                function successResponse($tools){
+$gametype = 'wheretheword';
+$query = "INSERT INTO game_scores (employee_id, session, game_type, score , timer) VALUES (?, ?, ?, ? , ?)";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("sssis", $username, $session, $gametype , $score , $time);
 
-                    //print_r($tools);
-                    $_SESSION['userPlayedCount']=1;
-                    $_SESSION['score']=$tools["points"];
-                    if($tools["isdemo"]){
-                        $_SESSION['uniqueMsg']="Your score is ".$tools["points"]."";
-                    }else{
-                        $_SESSION['uniqueMsg']="Your score is ".$tools["points"]."";
-                    }
-                    echo json_encode(array("success"=>true,"isdemo"=>$tools["isdemo"],"score"=>$tools["points"]));
-                }
+if ($stmt->execute()) {
+    $_SESSION['score']=1;
+    $_SESSION['uniqueMsg']="Your score ".$score." out of 6";
+    echo json_encode(array("success"=>"true" , "score" => $score));
 
-                $data=["gameId"=>$gameId,"name"=>$fullName,"sessionId"=>$sessionId,"userId"=>$userid,"organizationId"=>$organizationId,"points"=>$points,"time"=>$time,"ans"=>""];
-                addReportGuest($data);
+} else {
+    echo "Error recording score: " . $stmt->error;
+    echo json_encode(array("success"=>"true"));
+}
 
-            }else{
-                function successResponse($tools){
-                    $_SESSION['userPlayedCount']=1;
-                    $_SESSION['score']=$tools["points"];
-                    if($tools["isdemo"]){
-                        $_SESSION['uniqueMsg']="Your score is ".$tools["points"]."";
-                    }else{
-                        $_SESSION['uniqueMsg']="Your score is ".$tools["points"]."";
-                    }
-                    echo json_encode(array("success"=>true,"isdemo"=>$tools["isdemo"],"score"=>$tools["points"]));
-                }
-                $data=["points"=>$points,"time"=>$time];
-                addReport($data);
 
-            }
+     
 
-           
-    }
+
+
 
 ?>

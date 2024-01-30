@@ -895,7 +895,7 @@
                             </div>
                         </div>
                         <div class="row question">
-                            <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member  <input type="text" name="ans6" id="ans6"
+                            <div class="game-title1">8. SOPs help us know our roles and avoid pin-pointing at each other. This gives every team member  <input type="text" name="ans8" id="ans8"
                                     class=" login-text eightans" maxlength="7" autocomplete="off"> in achieving their goals.
                             </div>
                         </div>
@@ -1218,7 +1218,6 @@ $(document).ready(function() {
             $('#formdata').submit(function(event) {
                 event.preventDefault();
                 var formData = new FormData($("#formdata")[0]);
-                console.log(formData);
     $.ajax({
         url: "crossword-insert.php",
         type: "POST",
@@ -1228,20 +1227,13 @@ $(document).ready(function() {
         processData: false,
         success: function(d) {
 
-                  var data = JSON.parse(d);
+            var data = JSON.parse(d);
        	 	if(data.success=="true"){
                     swal("Thank you for submission", "",
                         "success").then(() => {
-                        location.href = ("leaderboard.php");
+                        location.href = ("../wheretheword");
                     });
-
-
-                } else if(d==1) {
-                    swal("Thank you for playing.Subscribe to any PLAN to play with your peers.", "",
-                        "success").then(() => {
-                            location.href = ("./");
-                    });
-                }
+            } 
 
 
          

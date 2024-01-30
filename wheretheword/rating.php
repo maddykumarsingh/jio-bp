@@ -1,18 +1,4 @@
-<?php
-ob_start();
-session_start();
-error_reporting(-1);
-include_once 'dao/config.php';
-if ($_SESSION['userid']== '') {
-    header("Location:index.php");
-}
-$userid=$_SESSION['userid'];
-$score="select * from wordpuzzle where userid='$userid'";
-$score=mysqli_query($con,$score);
-$score=mysqli_fetch_object($score);
-$score=$score->total_score;
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

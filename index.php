@@ -74,11 +74,11 @@ if (!isset($_SESSION['name']) || !isset($_SESSION['email']) || !isset($_SESSION[
                 </a>
             </div>
 
-            <div class="item">
+            <!-- <div class="item">
                     <a  href="./wheretheword">
                     <img width="50%" src="./wheretheword/images/welcome-logo.png" alt="">
                     </a>
-            </div>
+            </div> -->
         </div>
 
    

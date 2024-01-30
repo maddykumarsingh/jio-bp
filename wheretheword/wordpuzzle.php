@@ -111,18 +111,18 @@
     }
 
     #rf-tablegrid .rf-highlight {
-        background: #1b49e4;
+        background: #00943a;
     }
 
 
     #rf-tablegrid .rf-glowing {
-        background: black;
+        background: #00943a;
         color: #ffffff;
 
     }
 
     #rf-tablegrid .rf-selected {
-        background: #e9695e;
+        background: #00943a;
         color: white;
     }
 
